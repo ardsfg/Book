@@ -1,0 +1,24 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {section}{\numberline {1}Root of Unity}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Root of Unity Filter}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Evaluating Sums}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Inequalities}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Standard Inequalities}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Schur's}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Cauchy-Schwarz}{2}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}AM-GM-HM-QM}{2}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Weighted AM-GM}{2}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}Holder's}{2}{subsubsection.2.1.5}%
+\contentsline {subsubsection}{\numberline {2.1.6}Power Mean}{2}{subsubsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.2}Nonstandard Inequalities}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Smoothing}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Lagrange Multipliers}{2}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Polynomials}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Asymptotic Behavior}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Linear Constraints}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Interpolation}{2}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Misc}{2}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Finite Differences}{2}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Fourier Transformations}{2}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Analysis}{2}{section.5}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

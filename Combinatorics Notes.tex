@@ -1,5 +1,4 @@
 % !TEX root = ./Combinatorics Notes.tex
-\documentclass[...]{...}
 \documentclass[11pt]{scrartcl}
 
 %%%%%%%%%%%%%% LATEX SAMPLE FILE %%%%%%%%%%%%%%%%
@@ -15,11 +14,11 @@
 \usetikzlibrary{positioning,chains,fit,shapes,calc}
 \usepackage{forest}
 \usetikzlibrary{graphs,graphdrawing,arrows.meta}
-\usegdlibrary{trees}
 \usepackage[utf8x]{inputenc}
 \usepackage[dutch]{babel}
 \usepackage{tikz}
 \usetikzlibrary{shadows}
+\usegdlibrary{trees}
 \usepackage{framed}
 \usepackage[framed]{ntheorem}
 \usepackage{xcolor}
@@ -34,7 +33,7 @@
 % By including [theorem], the lemma follows the numbering of theorem
 % e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
 \theoremstyle{definition}
-\newtheorem{definition}{Definition} % the star prevents numbering
+% \newtheorem{definition}{Definition} % the star prevents numbering
 
 % Remarks
 \theoremstyle{remark}
@@ -42,6 +41,7 @@
 
 \theoremclass{Problem}
 \theoremstyle{empty}
+\theorembodyfont{\normalfont}
  \newcommand{\pmbox}[1]{
   \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
@@ -49,16 +49,37 @@
   \begin{tikzpicture}%
     \node [pmbox] (box){%
       \begin{minipage}{0.95\textwidth}%
-        \textit{#1}%
+        \text{#1}%
       \end{minipage}%
     };%\
     \end{tikzpicture}}
 
 \def\theoremframecommand{\pmbox}
 \newshadedtheorem{problem}{Problem}
+
+
+\theoremclass{Definition}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+
+ \newcommand{\dpmbox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\dpmbox}
+\newshadedtheorem{definition}{Definition}
     
 \theoremclass{Theorem}
 \theoremstyle{empty}
+\theorembodyfont{\normalfont}
 \newcommand{\tpmbox}[1]{
 \tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
 \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
@@ -77,6 +98,8 @@
 
 \theoremclass{Solution}
 \theoremstyle{empty}
+\theorembodyfont{\normalfont}
+
  \newcommand{\spmbox}[1]{
   \tikzstyle{spmbox} = [rectangle, rounded corners, draw=black, inner sep=10pt]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
@@ -134,6 +157,8 @@
 
 % Document content begins here
 \begin{document}
+% \usegdlibrary{trees}
+
 
 
 % Set up a title
@@ -170,9 +195,9 @@ The pigeonhole principle
 
 Recursion is 
 
-\begin{example}
+\begin{problem}
 How many ways are there to tile a $2 \times n$ grid o
-\end{example}
+\end{problem}
 
 \subsection{Group Theory}
 
@@ -192,9 +217,9 @@ A group is a set consisting of an identity element $g$, a binary operator $\oplu
 
 \end{definition}
 
-\begin{theorem}[Orbit Stabilizer Theorem]
+% \begin{theorem}[Orbit Stabilizer Theorem]
 
-\end{theorem}
+% \end{theorem}
 
 \begin{theorem}[Burnside's Lemma]
 Given a group $G$ and an operator $d$, \[|G| = \frac{1}{|X/G|} \sum_{x\in G} |X^d|\] where $|X^d|$ is the number of fixed points in $G$, $X/G$ is the number of orbits created by $d$, and $|G|$ is the number of elements in the set.
@@ -371,53 +396,57 @@ Visually, this theorem states that a maximal matching exists if
 Let $m,n \geqslant 2$ be integers, let $X$ be a set with $n$ elements, and let $X_1,X_2,\ldots,X_m$ be pairwise distinct non-empty, not necessary disjoint subset of $X$. A function $f \colon X \to \{1,2,\ldots,n+1\}$ is called nice if there exists an index $k$ such that\[\sum_{x \in X_k} f(x)>\sum_{x \in X_i} f(x) \quad \text{for all } i \ne k.\]Prove that the number of nice functions is at least $n^n$.
 \end{problem}
 
-\soln This problem has a lot of scary notation that we would like to simply. First, we will simplify $F(k) = \sum_{x\in X_k} f(x)$ to be the sum of the elements of in $X_k$ after applying $f$. Additionally, the strict inequality may be rephrased as: There exists a minimal $F(k)$ over all $k$. 
+\begin{solution}
+  
+  This problem has a lot of scary notation that we would like to simply. First, we will simplify $F(k) = \sum_{x\in X_k} f(x)$ to be the sum of the elements of in $X_k$ after applying $f$. Additionally, the strict inequality may be rephrased as: There exists a minimal $F(k)$ over all $k$. 
+  
+  Now we will create a bipartite graph with $n$ elements on the left side and $n+1$ elements on the right side. Below is a sample graph.
+  
+  \definecolor{myblue}{RGB}{80,80,160}
+  \definecolor{mygreen}{RGB}{80,160,80}
+  
+  \begin{center}
+  \begin{tikzpicture}[thick,
+    every node/.style={draw,circle},
+    fsnode/.style={fill=myblue},
+    ssnode/.style={fill=mygreen},
+    every fit/.style={ellipse,draw,inner sep=-2pt,text width=2cm},
+    ->,shorten >= 3pt,shorten <= 3pt
+  ]
+  
+  % the vertices of U
+  \begin{scope}[start chain=going below,node distance=7mm]
+  \foreach \i in {5,4,...,1}
+    \node[fsnode,on chain] (f\i) [label=left: \i] {};
+  \end{scope}
+  
+  % the vertices of V
+  \begin{scope}[xshift=4cm,yshift=1cm,start chain=going below,node distance=7mm]
+  \foreach \i in {6,5,...,1}
+    \node[ssnode,on chain] (s\i) [label=right: \i] {};
+  \end{scope}
+  
+  % the set U
+  \node [myblue,fit=(f1) (f5),label=above:$U$] {};
+  % the set V
+  \node [mygreen,fit=(s1) (s6),label=above:$V$] {};
+  
+  % the edges
+  \draw (f1) -- (s6);
+  \draw (f2) -- (s4);
+  \draw (f3) -- (s4);
+  \draw (f4) -- (s3);
+  \draw (f5) -- (s2);
+  \end{tikzpicture}
+  \end{center}
+  
+  We have the freedom to choose how $f$ maps the elements, and we also know that for any function $f$, there exists a minimal set, though there does not have to exists a \textbf{unique} minimal set. 
+  
+  Choose a function $f$ such that $f: \{1,2,3,\ldots, n\} \to \{2,3,\ldots, n+1\}$. Then there are $n^n$ such functions satisfying this property. 
+  
+  Without loss of generality, let $X_1,X_2,\ldots, X_k$ be the sets with minimal value. Because the sets are pairwise distinct, there exists an element such that 
+\end{solution}
 
-Now we will create a bipartite graph with $n$ elements on the left side and $n+1$ elements on the right side. Below is a sample graph.
-
-\definecolor{myblue}{RGB}{80,80,160}
-\definecolor{mygreen}{RGB}{80,160,80}
-
-\begin{center}
-\begin{tikzpicture}[thick,
-  every node/.style={draw,circle},
-  fsnode/.style={fill=myblue},
-  ssnode/.style={fill=mygreen},
-  every fit/.style={ellipse,draw,inner sep=-2pt,text width=2cm},
-  ->,shorten >= 3pt,shorten <= 3pt
-]
-
-% the vertices of U
-\begin{scope}[start chain=going below,node distance=7mm]
-\foreach \i in {5,4,...,1}
-  \node[fsnode,on chain] (f\i) [label=left: \i] {};
-\end{scope}
-
-% the vertices of V
-\begin{scope}[xshift=4cm,yshift=1cm,start chain=going below,node distance=7mm]
-\foreach \i in {6,5,...,1}
-  \node[ssnode,on chain] (s\i) [label=right: \i] {};
-\end{scope}
-
-% the set U
-\node [myblue,fit=(f1) (f5),label=above:$U$] {};
-% the set V
-\node [mygreen,fit=(s1) (s6),label=above:$V$] {};
-
-% the edges
-\draw (f1) -- (s6);
-\draw (f2) -- (s4);
-\draw (f3) -- (s4);
-\draw (f4) -- (s3);
-\draw (f5) -- (s2);
-\end{tikzpicture}
-\end{center}
-
-We have the freedom to choose how $f$ maps the elements, and we also know that for any function $f$, there exists a minimal set, though there does not have to exists a \textbf{unique} minimal set. 
-
-Choose a function $f$ such that $f: \{1,2,3,\ldots, n\} \to \{2,3,\ldots, n+1\}$. Then there are $n^n$ such functions satisfying this property. 
-
-Without loss of generality, let $X_1,X_2,\ldots, X_k$ be the sets with minimal value. Because the sets are pairwise distinct, there exists an element such that 
 
 \subsection{Inequalities}
 
@@ -478,7 +507,7 @@ Let $n$ be a positive integer. A Japanese triangle consists of $1 + 2 + \dots + 
 
 \end{problem}
 
-\begin{proof}
+\begin{solution}
 At first glance, this problem looks very scary. \textit{Where} does the $\sqrt[3]{6n}$ even come from? 
 
 Actually, this bound is very weak. The asymptote should be closer to $c\log n$ for some constant $c$. This is because given a sufficiently large set $A$, we effectively halve $n$ every iteration, without regard to modulus problems. 
@@ -488,7 +517,7 @@ Now we can calm down. Noting that the $\sqrt[3]{6n}$ looks oddly like the sum of
 We may note that $a_k$ is counted at most $a_{k+1}$ times. This is because we can otherwise count $a_{k+1}$ $a_k$ times, meaning there is a partition with less elements. 
 
 \[\sum_{i=1}^{k-1} a_i^2 \le \sum_{i=1}^{k-1}a_ia_{i+1} \le n\]
-\end{proof}
+\end{solution}
 
 \subsection{Constructions}
 
@@ -520,7 +549,10 @@ We need at least $3$ moves, otherwise we can spawn the monsters on Turbo.
 Let $n$ be a positive integer. We start with $n$ piles of pebbles, each initially containing a single pebble. One can perform moves of the following form: choose two piles, take an equal number of pebbles from each pile and form a new pile out of these pebbles. Find (in terms of $n$) the smallest number of nonempty piles that one can obtain by performing a finite sequence of moves of this form.	
 \end{problem}
 
-\soln This problem appears difficult. We may notice that if $n$ is a power of $2$, then we can pair all the stones to create a single pile with $n$ stones. Otherwise, we may write $n$ as a binary number and create a pile for each $1$ in its binary representation. Below is an example.
+\begin{solution}
+  
+  This problem appears difficult. We may notice that if $n$ is a power of $2$, then we can pair all the stones to create a single pile with $n$ stones. Otherwise, we may write $n$ as a binary number and create a pile for each $1$ in its binary representation. Below is an example.
+\end{solution}
 
 \begin{minipage}{0.5\textwidth}
 \begin{tikzpicture}
