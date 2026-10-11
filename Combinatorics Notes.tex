@@ -1,0 +1,579 @@
+% !TEX root = ./Combinatorics Notes.tex
+\documentclass[...]{...}
+\documentclass[11pt]{scrartcl}
+
+%%%%%%%%%%%%%% LATEX SAMPLE FILE %%%%%%%%%%%%%%%%
+% A line which starts with a % sign
+% is called a COMMENT. It is IGNORED
+% by the LaTeX processor.
+
+% Include math
+\usepackage{amsmath,amsthm,amssymb}
+% Include links
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{positioning,chains,fit,shapes,calc}
+\usepackage{forest}
+\usetikzlibrary{graphs,graphdrawing,arrows.meta}
+\usegdlibrary{trees}
+\usepackage[utf8x]{inputenc}
+\usepackage[dutch]{babel}
+\usepackage{tikz}
+\usetikzlibrary{shadows}
+\usepackage{framed}
+\usepackage[framed]{ntheorem}
+\usepackage{xcolor}
+
+
+
+%%%%%%%%%%%%%  THEOREMS  %%%%%%%%%%%%%%%%%
+% Let's define some theorem environments
+% To use later in the paper
+\theoremstyle{plain} % other options: definition, remark
+
+% By including [theorem], the lemma follows the numbering of theorem
+% e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
+\theoremstyle{definition}
+\newtheorem{definition}{Definition} % the star prevents numbering
+
+% Remarks
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\theoremclass{Problem}
+\theoremstyle{empty}
+ \newcommand{\pmbox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \textit{#1}%
+      \end{minipage}%
+    };%\
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\pmbox}
+\newshadedtheorem{problem}{Problem}
+    
+\theoremclass{Theorem}
+\theoremstyle{empty}
+\newcommand{\tpmbox}[1]{
+\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+\noindent%
+\begin{tikzpicture}%
+\node [tpmbox] (box){%
+  \begin{minipage}{0.95\textwidth}%
+    \textit{#1}%
+  \end{minipage}%
+};%\
+\node[fancytitle] at (box.north) {%
+};%
+\end{tikzpicture}}
+
+\newcommand\theo{\tpmbox}\newshadedtheorem{theorem}{Theorem}
+
+\theoremclass{Solution}
+\theoremstyle{empty}
+ \newcommand{\spmbox}[1]{
+  \tikzstyle{spmbox} = [rectangle, rounded corners, draw=black, inner sep=10pt]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [spmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right=10pt] at (box.north west) {\textbf{Solution}%
+    };%
+    \end{tikzpicture}}
+ 
+\def\theoremframecommand{\spmbox}
+\newshadedtheorem{solution}{Solution}
+
+% \begin{figure}
+%     \centering%
+%     \begin{tikzpicture}
+%         \node at (0,0) (a) {a};
+%         \node at (1,0) (b) {b};
+%         \draw (a)--(b);
+
+%         \node[above = \baselineskip of current bounding box] {%
+%             \begin{minipage}{0.9\linewidth}
+%                 Text or whatever you want to put here.
+
+%                 \begin{equation*}
+%                     1 = 2
+%                 \end{equation*}
+%             \end{minipage}%
+%         };
+%         \draw (current bounding box.north west) rectangle (current bounding box.south east);
+%     \end{tikzpicture}
+% \end{figure}
+
+
+%%%%%%%%%%%%%%  PAGE SETUP %%%%%%%%%%%%%%%%%
+% LaTeX has big default margins
+\usepackage[margin=1.5in]{geometry}
+
+% The following sets up some headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Combinatorics Notes} % Left Header
+\rhead{\thepage} % Right Header
+\cfoot{} % Center Foot (empty)
+
+%%%%%%%%%%%%% SHORTCUTS %%%%%%%%%%%%%%%%%%%%
+% You can define your own shortcuts too.
+% Examples of custom commands
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+
+% Document content begins here
+\begin{document}
+
+
+% Set up a title
+\title{Combinatorics Notes}
+\author{Raymond Xu}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+  % This is an example of a \LaTeX\ document,
+  % complete with theorems and headers and the like.
+\end{abstract}
+
+% This line makes a ToC
+\tableofcontents
+
+% This line starts a new page
+\eject
+
+
+\section{Fundamentals of Combinatorics}
+
+\subsection{Permutations}
+
+\subsection{Pigeonhole}
+
+The pigeonhole principle
+
+\subsection{Bijection}
+
+\subsection{Generating Functions}
+
+\subsection{Recursion}
+
+Recursion is 
+
+\begin{example}
+How many ways are there to tile a $2 \times n$ grid o
+\end{example}
+
+\subsection{Group Theory}
+
+\begin{definition}[Group]
+A group is a set consisting of an identity element $g$, a binary operator $\oplus$ which maps two elements to one, and requires every element to have an inverse.
+\end{definition}
+
+\begin{definition}[Fixed Point]
+
+\end{definition}
+
+\begin{definition}[Stabilizer]
+
+\end{definition}
+
+\begin{definition}[Orbit]
+
+\end{definition}
+
+\begin{theorem}[Orbit Stabilizer Theorem]
+
+\end{theorem}
+
+\begin{theorem}[Burnside's Lemma]
+Given a group $G$ and an operator $d$, \[|G| = \frac{1}{|X/G|} \sum_{x\in G} |X^d|\] where $|X^d|$ is the number of fixed points in $G$, $X/G$ is the number of orbits created by $d$, and $|G|$ is the number of elements in the set.
+\end{theorem}
+
+\proof From the orbit stabilizer theorem 
+
+This theorem is particularly useful in computational problems, where 
+
+\begin{problem}[Classic]
+How many ways are there to color the edges of a square red and blue given that rotations are considered the same?
+\end{problem}
+
+\begin{problem}[Classic]
+How many ways are there to color the edges of a tetrahedron red and blue given that rotations are considered the same?
+\end{problem}
+
+\begin{problem}[Own]
+How many ways are there to color the vertices of a $100$-gon $50$ colors given that rotations are considered the same?
+\end{problem}
+
+\section{Advanced Topics}
+
+\subsection{Reduction}
+
+\begin{problem}
+    
+\end{problem}
+
+
+\subsection{Induction}
+
+Induction and reduction are two of the more common techniques for combinatorics problems. This technique is often coupled with 
+
+\subsection{Invariants and Monovariants}
+
+Invariants and monovariants are powerful tools for determining solution sets to problems. Many invariants come in a modulus form or a fixed sum, and many monovariants are used to produce lower bounds to problems. 
+
+\begin{problem}[2024 ISL C3]
+Let $n$ be a positive integer. There are $2n$ knights sitting at a round table. They consist of $n$ pairs of partners, each pair of which wishes to shake hands. A pair can shake hands only when next to each other. Every minute, one pair of adjacent knights swaps places. Find the minimum number of exchanges of adjacent knights such that, regardless of the initial arrangement, every knight can meet her partner and shake hands at some time.	
+\end{problem}
+
+We may quickly determine the starting arrangement which maximizes the number of exchanges: just put every knight diametrically opposite their partner. In the picture below, knights with labels $\pmod{10}$ are paired. 
+
+\begin{center}
+\begin{tikzpicture}
+\def \n {20}
+\def \radius {3}
+\draw circle(\radius)
+      foreach\s in{1,...,\n}{
+          (-360/\n*\s:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+          node[anchor=-360/\n*\s+180]{\s}
+      };
+\end{tikzpicture}
+\end{center}
+
+The trouble is that there might be a configuration which is more optimal than this one. Let's break this down.
+
+Intuitively, every move, two knights should move closer to their partners. Given we want to find the maximal number of moves, it suffices to find some variant $X$ where we can simply divide $X$ by $2$ to get the answer. 
+
+Suppose two pairs of knights are on the same half arc. If their initial position is $ABAB$, then swapping the two in the middle will yield $AABB$, which is desireable. Otherwise, if their position is $ABBA$, swapping the middle ones will be undesireable.
+
+\begin{minipage}{0.6\textwidth}
+\begin{tikzpicture}
+\def \n {20}
+\def \radius {3}
+\draw circle(\radius)
+  foreach\s in{1,...,\n}{
+      (-360/\n*\s:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s+180]{}
+  };
+\draw [blue] foreach\s in{1,...,2}{
+      (-360/\n*\s*6+36:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s]{}
+  };
+\draw [blue] (-3,0) -- (0.92705098311, -2.85316954889);
+\draw [red] foreach\s in{1,...,2}{
+      (-360/\n*\s*5+90:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s]{}
+  };
+\draw [red] (0,-3) -- (3, 0);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}
+\def \n {20}
+\def \radius {3}
+\draw circle(\radius)
+  foreach\s in{1,...,\n}{
+      (-360/\n*\s:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s+180]{}
+  };
+\draw [blue]
+  foreach\s in{1,...,2}{
+      (-360/\n*\s*5:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s+180]{}
+  };
+\draw [blue] (-3,0) -- (0,-3);
+\draw [red] foreach\s in{1,...,2}{
+      (-360/\n*\s*4+72:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s]{}
+  };
+\draw [red] (3,0) -- (0.92705098311, -2.85316954889);
+\end{tikzpicture}
+\end{minipage}
+
+In sum, it is not enough to sum the distances between pairs of knights. We must create the variant \[F(p) = \sum _{\text{pairs of knights}}\text{distance} - \text{\# of intersections between chords}\] 
+
+Whenever we switch two adjacent knights, the variant decreases by at most $1$. But in any position, a move decreasing the distance between a pair of knight decreases the variant, so we have our bound. Then it suffices to maximize $F$. 
+
+Consider what happens when we add a pair of knights to the arrangement. If we add the orange pair, as shown below, we increase the variant by the distance between the two segments. (ok i got lazy and there are an equal number of nodes, but there are supposed to be 22!)
+
+\begin{center}
+\begin{tikzpicture}
+\def \n {20}
+\def \radius {3}
+\draw circle(\radius)
+  foreach\s in{1,...,\n}{
+      (-360/\n*\s:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s+180]{}
+  };
+\draw [blue]
+  foreach\s in{1,...,2}{
+      (-360/\n*\s*5:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s+180]{}
+  };
+\draw [blue] (-3,0) -- (0,-3);
+\draw [red] foreach\s in{1,...,2}{
+      (-360/\n*\s*4+72:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s]{}
+  };
+\draw [red] (3,0) -- (0.92705098311, -2.85316954889);
+\draw [orange] foreach\s in{1,...,2}{
+      (-360/\n*\s*6+72:\radius)circle(.4pt)circle(.8pt)circle(1.2pt)
+      node[anchor=-360/\n*\s]{}
+  };
+\draw [orange] (-2.42705098312,-1.76335575688) -- (2.42705098312, -1.76335575688);
+\end{tikzpicture}
+\end{center}
+
+Then the second bound becomes quite obvious: by putting every new pair of knights diametrically opposite, we maximize the sum, which turns out to be $1 + 2 + \ldots + n = \frac{n(n+1)}{2}$, and this is our answer.
+
+This example was very motivated. I encourage you to try thinking of the solution on your own and build your own solution to the problem.
+
+\begin{problem}[2025 USAMO 6]
+
+\end{problem}
+
+\begin{problem}[]
+
+\end{problem}
+
+\subsection{Graph Theory}
+
+\begin{definition}[Graph]
+A graph is a collection of vertices (nodes) and edges such 
+\end{definition}
+
+Many combinatorics problems actually have hidden graph interpretations. While apparently simple, graphs can greatly simplify problems and allow us to make concrete arguments about the problem.
+
+\begin{definition}[Bipartite]
+A graph is bipartite if it can be divided into two sets $A$ and $B$ such that no two elements in $A$ share an edge, and no two elements in $B$ share an edge. 
+\end{definition}
+
+Visually, a bipartite graph looks like
+
+\begin{theorem}[Hall's Marriage Theorem]
+Given an injective function $f: A \to B$, there exists a maximal matching if and only if \[\forall G \subseteq A, |G| \le |\bigcup_{S\in \mathcal{F}} S|\] where $\mathcal{F}$ is the image of the elements of $G$ under $f$. 
+\end{theorem}
+
+Visually, this theorem states that a maximal matching exists if 
+
+\begin{problem}[2022 ISL C5]
+Let $m,n \geqslant 2$ be integers, let $X$ be a set with $n$ elements, and let $X_1,X_2,\ldots,X_m$ be pairwise distinct non-empty, not necessary disjoint subset of $X$. A function $f \colon X \to \{1,2,\ldots,n+1\}$ is called nice if there exists an index $k$ such that\[\sum_{x \in X_k} f(x)>\sum_{x \in X_i} f(x) \quad \text{for all } i \ne k.\]Prove that the number of nice functions is at least $n^n$.
+\end{problem}
+
+\soln This problem has a lot of scary notation that we would like to simply. First, we will simplify $F(k) = \sum_{x\in X_k} f(x)$ to be the sum of the elements of in $X_k$ after applying $f$. Additionally, the strict inequality may be rephrased as: There exists a minimal $F(k)$ over all $k$. 
+
+Now we will create a bipartite graph with $n$ elements on the left side and $n+1$ elements on the right side. Below is a sample graph.
+
+\definecolor{myblue}{RGB}{80,80,160}
+\definecolor{mygreen}{RGB}{80,160,80}
+
+\begin{center}
+\begin{tikzpicture}[thick,
+  every node/.style={draw,circle},
+  fsnode/.style={fill=myblue},
+  ssnode/.style={fill=mygreen},
+  every fit/.style={ellipse,draw,inner sep=-2pt,text width=2cm},
+  ->,shorten >= 3pt,shorten <= 3pt
+]
+
+% the vertices of U
+\begin{scope}[start chain=going below,node distance=7mm]
+\foreach \i in {5,4,...,1}
+  \node[fsnode,on chain] (f\i) [label=left: \i] {};
+\end{scope}
+
+% the vertices of V
+\begin{scope}[xshift=4cm,yshift=1cm,start chain=going below,node distance=7mm]
+\foreach \i in {6,5,...,1}
+  \node[ssnode,on chain] (s\i) [label=right: \i] {};
+\end{scope}
+
+% the set U
+\node [myblue,fit=(f1) (f5),label=above:$U$] {};
+% the set V
+\node [mygreen,fit=(s1) (s6),label=above:$V$] {};
+
+% the edges
+\draw (f1) -- (s6);
+\draw (f2) -- (s4);
+\draw (f3) -- (s4);
+\draw (f4) -- (s3);
+\draw (f5) -- (s2);
+\end{tikzpicture}
+\end{center}
+
+We have the freedom to choose how $f$ maps the elements, and we also know that for any function $f$, there exists a minimal set, though there does not have to exists a \textbf{unique} minimal set. 
+
+Choose a function $f$ such that $f: \{1,2,3,\ldots, n\} \to \{2,3,\ldots, n+1\}$. Then there are $n^n$ such functions satisfying this property. 
+
+Without loss of generality, let $X_1,X_2,\ldots, X_k$ be the sets with minimal value. Because the sets are pairwise distinct, there exists an element such that 
+
+\subsection{Inequalities}
+
+\begin{problem}[1993 ISL C2]
+Let $n,k \in \mathbb{Z}^{+}$ with $k \leq n$ and let $S$ be a set containing $n$ distinct real numbers. Let $T$ be a set of all real numbers of the form $x_1 + x_2 + \ldots + x_k$ where $x_1, x_2, \ldots, x_k$ are distinct elements of $S.$ Prove that $T$ contains at least $k(n-k)+1$ distinct elements.	
+\end{problem}
+
+\begin{solution}
+    Let \[x_1 < x_2 < \ldots < x_n\] so that the largest element in $T$ is $x_n+\ldots + x_{n-k+1}$, and the smallest element is $x_1+\ldots + x_k$. For every sum $x_{i_1}+x_{i_2}+\dots + x_{i_k)}$, consider the $(n+(n-1)+\ldots + (n-k+1)) - \frac{k(k+1)}{2}+1 = k(n-k)+1$ values of $i_1+\ldots+i_k$. We claim that there is one distinct sum in each set. Indeed, for every element in the set with value $m$, there is at least one element in the set with value $m+1$ which is greater than it. Then just take the maximal value of the set with value $m$ to finish.
+\end{solution}
+
+\begin{problem}[2013 ISl C4]
+Let $n$ be a positive integer, and let $A$ be a subset of $\{ 1,\cdots ,n\}$. An $A$-partition of $n$ into $k$ parts is a representation of n as a sum $n = a_1 + \cdots + a_k$, where the parts $a_1 , \cdots , a_k $ belong to $A$ and are not necessarily distinct. The number of different parts in such a partition is the number of (distinct) elements in the set $\{ a_1 , a_2 , \cdots , a_k \} $.
+We say that an $A$-partition of $n$ into $k$ parts is optimal if there is no $A$-partition of $n$ into $r$ parts with $r<k$. Prove that any optimal $A$-partition of $n$ contains at most $\sqrt[3]{6n}$ different parts.
+\end{problem}
+
+\begin{solution}
+At first glance, this problem looks intimidating. \textit{Where} did the $\sqrt[3]{6n}$ come from? 
+
+Actually, the bound is very loose; the true asymptote is closer to log in polynomial time, and we have the power to make very weak bounds.
+
+If we take some $k$ element subset $A = \{a_1,a_2,\ldots, a_k\}$ where \[a_1, a_2,\ldots, a_k \in \{\}\]
+\end{solution}
+
+
+Now we're ready to apply some of the 
+
+\begin{problem}[2023 IMO/5]
+	Let $n$ be a positive integer. A Japanese triangle consists of $1 + 2 + \dots + n$ circles arranged in an equilateral triangular shape such that for each $i = 1$, $2$, $\dots$, $n$, the $i^{th}$ row contains exactly $i$ circles, exactly one of which is coloured red. A ninja path in a Japanese triangle is a sequence of $n$ circles obtained by starting in the top row, then repeatedly going from a circle to one of the two circles immediately below it and finishing in the bottom row. Here is an example of a Japanese triangle with $n = 6$, along with a ninja path in that triangle containing two red circles.
+[asy]
+// credit to vEnhance for the diagram (which was better than my original asy):
+size(4cm);
+  pair X = dir(240); pair Y = dir(0);
+  path c = scale(0.5)*unitcircle;
+  int[] t = {0,0,2,2,3,0};
+  for (int i=0; i<=5; ++i) {
+    for (int j=0; j<=i; ++j) {
+      filldraw(shift(i*X+j*Y)*c, (t[i]==j) ? lightred : white);
+      draw(shift(i*X+j*Y)*c);
+    }
+  }
+  draw((0,0)--(X+Y)--(2*X+Y)--(3*X+2*Y)--(4*X+2*Y)--(5*X+2*Y),linewidth(1.5));
+  path q = (3,-3sqrt(3))--(-3,-3sqrt(3));
+  draw(q,Arrows(TeXHead, 1));
+  label("$n = 6$", q, S);
+label("$n = 6$", q, S);
+[/asy]
+In terms of $n$, find the greatest $k$ such that in each Japanese triangle there is a ninja path containing at least $k$ red circles.
+\end{problem}
+
+
+
+\begin{problem}[Buffed 2023 IMO P5]
+Let $n$ be a positive integer. A Japanese triangle consists of $1 + 2 + \dots + n$ circles arranged in an equilateral triangular shape such that for each $i = 1$, $2$, $\dots$, $n$, the $i^{th}$ row contains exactly $i$ circles, exactly one of which is coloured red. A ninja path in a Japanese triangle is a sequence of $n$ circles obtained by starting in the top row, then repeatedly going from a circle to one of the two circles immediately below it and finishing in the bottom row. Here is an example of a Japanese triangle with $n = 6$, along with a ninja path in that triangle containing two red circles.
+\end{problem}
+
+\begin{problem}[2013 ISL C4]
+
+\end{problem}
+
+\begin{proof}
+At first glance, this problem looks very scary. \textit{Where} does the $\sqrt[3]{6n}$ even come from? 
+
+Actually, this bound is very weak. The asymptote should be closer to $c\log n$ for some constant $c$. This is because given a sufficiently large set $A$, we effectively halve $n$ every iteration, without regard to modulus problems. 
+
+Now we can calm down. Noting that the $\sqrt[3]{6n}$ looks oddly like the sum of squares formula, we can be confident in making looser bounds.
+
+We may note that $a_k$ is counted at most $a_{k+1}$ times. This is because we can otherwise count $a_{k+1}$ $a_k$ times, meaning there is a partition with less elements. 
+
+\[\sum_{i=1}^{k-1} a_i^2 \le \sum_{i=1}^{k-1}a_ia_{i+1} \le n\]
+\end{proof}
+
+\subsection{Constructions}
+
+Construction problems can be tricky, especially if the obvious solution seems like a trap. But most constructions are very motivated, and we will give examples of motivated and unmotivated solutions.
+
+\begin{problem}[2024 ISL C4]
+Turbo the snail plays a game on a board with $2024$ rows and $2023$ columns. There are hidden monsters in $2022$ of the cells. Initially, Turbo does not know where any of the monsters are, but he knows that there is exactly one monster in each row except the first row and the last row, and that each column contains at most one monster.
+
+Turbo makes a series of attempts to go from the first row to the last row. On each attempt, he chooses to start on any cell in the first row, then repeatedly moves to an adjacent cell sharing a common side. (He is allowed to return to a previously visited cell.) If he reaches a cell with a monster, his attempt ends and he is transported back to the first row to start a new attempt. The monsters do not move, and Turbo remembers whether or not each cell he has visited contains a monster. If he reaches any cell in the last row, his attempt ends and the game is over.
+
+Determine the minimum value of $n$ for which Turbo has a strategy that guarantees reaching the last row on the $n$-th attempt or earlier, regardless of the locations of the monsters.
+\end{problem}
+
+Here it is. The infamous Turbo the Snail. At first glance, $2023$ seems like a fair answer: we just send Turbo down each lane until he wins. But we should find a way to do better. 
+
+We should ask what information each death gives us. If Turbo encounters a monster in a column, he knows there are no monsters anywhere else in the column (i.e. anywhere behind it). Then given the encountered monster is not in the first or last column, we require $3$ moves to move past it. 
+
+Additionally, if we encounter a monster in the $i+1$th row, we need to be sure that there are no monsters in the $i$th row that would stop us from sneaking past it. 
+
+Then we can assume Turbo can sweep out a triangle with base $2021$ and height $1011$ without encountering a monster. Now we are seemingly stuck. We can't progress without taking a risk, but it's calculated. 
+
+Send Turbo all the way to the right. If he encounters a monster, then we are guaranteed a safe column. Otherwise, have him fill in the entire $2023 \times 1011$ grid. Otherwise, he hits a monster, and on his second life, have him repeat the same triangle-filling pattern as his first life. 
+
+He is guaranteed to hit a monster by pigeonhole, and when he does, he may use the row (which is safe) and then the column he discovered (which is safe) to reach the end. 
+
+We need at least $3$ moves, otherwise we can spawn the monsters on Turbo. 
+
+\begin{problem}[2022 ISL C6]
+Let $n$ be a positive integer. We start with $n$ piles of pebbles, each initially containing a single pebble. One can perform moves of the following form: choose two piles, take an equal number of pebbles from each pile and form a new pile out of these pebbles. Find (in terms of $n$) the smallest number of nonempty piles that one can obtain by performing a finite sequence of moves of this form.	
+\end{problem}
+
+\soln This problem appears difficult. We may notice that if $n$ is a power of $2$, then we can pair all the stones to create a single pile with $n$ stones. Otherwise, we may write $n$ as a binary number and create a pile for each $1$ in its binary representation. Below is an example.
+
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}
+    \node{}
+        child{node{}
+            child{node{}}
+            child{node{}}
+        }
+        child{node{e}
+            child{node{}}
+            child{node{}}
+        };
+\end{tikzpicture}
+\end{minipage}
+
+Now let us see if we can make any improvements. 
+
+Consider the largest bit of $n$. Because $2^k > 2^{k-1}+\ldots + 1$, we can partition the bit into these smaller sums, and we can select which ones to add to the smallest bit. This means we can reduce the number of piles to $2$ which is very good!
+
+Now to show we cannot reduce the number of piles to 1: because every newly-formed pile must be even, we can continually divide whatever numbers we have in $2$ to revert to the previous positions. 
+
+In the end, we have a bunch of odd numbers, which are impossible to form unless it is $1$. Therefore, we cannot get $1$ pile for $n$ that is not a power of $2$.
+
+This gives us the answer \[f(n) = \begin{cases}
+    1 \text{ if $n$ is a power of $2$} \\ $2$ \text{ otherwise}
+\end{cases}\]
+
+
+
+\subsection{Games}
+
+\subsection{Sledgehammers}
+
+\subsubsection{Zeckendorf Representation}
+
+\subsubsection{Wythoff Array}
+
+\subsubsection{}
+
+\subsection{Algorithms}
+
+\begin{problem}[2014 ISL C5]
+  A set of lines in the plane is in general position if no two are parallel and no three pass through the same point. A set of lines in general position cuts the plane into regions, some of which have finite area; we call these its finite regions. Prove that for all sufficiently large $n$, in any set of $n$ lines in general position it is possible to colour at least $\sqrt{n}$ lines blue in such a way that none of its finite regions has a completely blue boundary.
+
+Note: Results with $\sqrt{n}$ replaced by $c\sqrt{n}$ will be awarded points depending on the value of the constant $c$.
+\end{problem}
+
+\begin{solution}
+  This problem is tricky. 
+\end{solution}
+
+\section{About the Author}
+
+\section{References and Further Reading}
+
+\end{document}
