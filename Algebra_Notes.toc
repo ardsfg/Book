@@ -11,14 +11,15 @@
 \contentsline {subsubsection}{\numberline {2.1.5}Holder's}{2}{subsubsection.2.1.5}%
 \contentsline {subsubsection}{\numberline {2.1.6}Power Mean}{2}{subsubsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.2}Nonstandard Inequalities}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Smoothing}{2}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Lagrange Multipliers}{2}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Polynomials}{2}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Asymptotic Behavior}{2}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Linear Constraints}{2}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Interpolation}{2}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Misc}{2}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Finite Differences}{2}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Fourier Transformations}{2}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Analysis}{2}{section.5}%
+\contentsline {subsection}{\numberline {2.3}Smoothing}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Lagrange Multipliers}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Polynomials}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Asymptotic Behavior}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Linear Constraints}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Interpolation}{3}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Misc}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Finite Differences}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Fourier Transformations}{3}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Analysis}{4}{section.5}%
+\contentsline {section}{\numberline {6}Algebraic Geometry}{5}{section.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

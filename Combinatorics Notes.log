@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  11 OCT 2026 07:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  11 OCT 2026 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -520,13 +520,9 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikz@expandcount=\count329
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarychains.code.tex
-File: tikzlibrarychains.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
-File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/forest/forest.sty
+Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -544,8 +540,7 @@ File: pgflibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: tikzlibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex))
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -569,11 +564,12 @@ File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodepartsevenbox=\box85
 \pgfnodepartsixbox=\box86
 \pgfnodepartfivebox=\box87
-))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/forest/forest.sty
-Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
 \pgf@intersect@solutions=\count330
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
@@ -636,148 +632,6 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@copy@out=\write4
 \forest@externalize@max@outer@n=\count356
 \forest@externalize@inner@n=\count357
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
-File: tikzlibrarygraphs.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\tikz@lib@auto@number=\count358
-\tikz@qnode@count=\count359
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex
-File: tikzlibrarygraphdrawing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.code.tex
-File: pgflibrarygraphdrawing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.code.tex:22: Package pgf Error: You need to run LuaTeX to use the graph drawing library.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 ...n LuaTeX to use the graph drawing library}
-                                                  
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-)
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:67: Undefined control sequence.
-l.67 \pgfgdsetrequestcallback
-                             \tikz@gd@request@callback
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Runaway argument?
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:68: Paragraph ended before \tikz@gd@request@callback was complete.
-<to be read again> 
-                   \par 
-l.68 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:71: Undefined control sequence.
-l.71 \pgfgdappendtoforwardinglist
-                                 {/tikz/,/tikz/graphs/}%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:71: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \pgfgdappendtoforwardinglist{/
-                                   tikz/,/tikz/graphs/}%
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:100: Undefined control sequence.
-l.100 \pgfgdaddprepareedgehook
-                              {
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:152: Undefined control sequence.
-l.152 \pgfgdset
-               {
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:153: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.153   c
-         onversions/canvas coordinate/.code={%
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:154: Package tikz Error: Cannot parse this coordinate.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \tikz@scan@one@point\pgf@process#
-                                           1%
-(That was another \errmessage.)
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:154: You can't use `macro parameter character #' in horizontal mode.
-<recently read> ##
-                  
-l.154     \tikz@scan@one@point\pgf@process#
-                                           1%
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:160: Package tikz Error: Cannot parse this coordinate.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.160     \tikz@scan@one@point\pgf@process#
-                                           1%
-(That was another \errmessage.)
-
-/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex:160: You can't use `macro parameter character #' in horizontal mode.
-<recently read> ##
-                  
-l.160     \tikz@scan@one@point\pgf@process#
-                                           1%
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
-File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen276
-\pgfarrowlength=\dimen277
-\pgfarrowwidth=\dimen278
-\pgfarrowlinewidth=\dimen279
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks55
@@ -1231,7 +1085,7 @@ Now handling font encoding PU ...
    defining Unicode char U+FEFF (decimal 65279)
 ))) (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2026/03/08 v26.4 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count360
+\babel@savecnt=\count358
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
@@ -1239,11 +1093,11 @@ LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
-\U@D=\dimen280
+\U@D=\dimen276
 \l@unhyphenated=\language91
  (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read4
-\bbl@dirlevel=\count361
+\bbl@dirlevel=\count359
  (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/nl/babel-dutch.tex)
 Package babel Info: Importing font and identification data for dutch
 (babel)             from babel-nl.ini. Reported on input line 4330.
@@ -1256,35 +1110,13 @@ File: tikzlibraryshadows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
 File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-/Users/ray/Book/Combinatorics Notes.tex:21: Undefined control sequence.
-l.21 \usegdlibrary
-                  {trees}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/ray/Book/Combinatorics Notes.tex:21: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \usegdlibrary{t
-                    rees}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/framed/framed.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip72
-\fb@frw=\dimen281
-\fb@frh=\dimen282
-\FrameRule=\dimen283
-\FrameSep=\dimen284
+\fb@frw=\dimen277
+\fb@frh=\dimen278
+\FrameRule=\dimen279
+\FrameSep=\dimen280
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/ntheorem/ntheorem.sty
 Style `ntheorem', Version 1.33 <2011/08/15>
 Package: ntheorem 2011/08/15 1.33
@@ -1307,10 +1139,10 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \theorem@framepostskip=\toks64
 \theorem@inframepreskip=\toks65
 \theorem@inframepostskip=\toks66
-\theoremindent=\dimen285
-\theorem@indent=\dimen286
-\theoremrightindent=\dimen287
-\theorem@rightindent=\dimen288
+\theoremindent=\dimen281
+\theorem@indent=\dimen282
+\theoremrightindent=\dimen283
+\theorem@rightindent=\dimen284
 \theoremheaderfont=\toks67
 \theoremseparator=\toks68
 \theoremprework=\toks69
@@ -1323,27 +1155,27 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \thm@topsepadd=\skip80
 \shadecolor=\toks75
 )
-\c@remark=\count362
-\c@problem=\count363
-\c@definition=\count364
-\c@theorem=\count365
-\c@solution=\count366
+\c@remark=\count360
+\c@problem=\count361
+\c@definition=\count362
+\c@theorem=\count363
+\c@solution=\count364
  (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
  (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count367
-\Gm@cntv=\count368
-\c@Gm@tempcnt=\count369
-\Gm@bindingoffset=\dimen289
-\Gm@wd@mp=\dimen290
-\Gm@odd@mp=\dimen291
-\Gm@even@mp=\dimen292
-\Gm@layoutwidth=\dimen293
-\Gm@layoutheight=\dimen294
-\Gm@layouthoffset=\dimen295
-\Gm@layoutvoffset=\dimen296
+\Gm@cnth=\count365
+\Gm@cntv=\count366
+\c@Gm@tempcnt=\count367
+\Gm@bindingoffset=\dimen285
+\Gm@wd@mp=\dimen286
+\Gm@odd@mp=\dimen287
+\Gm@even@mp=\dimen288
+\Gm@layoutwidth=\dimen289
+\Gm@layoutheight=\dimen290
+\Gm@layouthoffset=\dimen291
+\Gm@layoutvoffset=\dimen292
 \Gm@dimlist=\toks76
 )
 
@@ -1358,7 +1190,7 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              `\addtokomafont' for the page style elements need
 (scrartcl)              explicite user intervention to work.
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `fancyhdr' on input line 147.
+(scrartcl)              package `fancyhdr' on input line 151.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
@@ -1385,46 +1217,46 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 159.
+(scrartcl)           before \begin{document} on input line 163.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count370
+\BKM@id=\count368
 )) (./Combinatorics Notes.aux)
 \openout1 = `"Combinatorics Notes.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-Package hyperref Info: Link coloring OFF on input line 159.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+Package hyperref Info: Link coloring OFF on input line 163.
  (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count371
-\scratchdimen=\dimen297
+\scratchcounter=\count369
+\scratchdimen=\dimen293
 \scratchbox=\box89
-\nofMPsegments=\count372
-\nofMParguments=\count373
+\nofMPsegments=\count370
+\nofMParguments=\count371
 \everyMPshowfont=\toks78
-\MPscratchCnt=\count374
-\MPscratchDim=\dimen298
-\MPnumerator=\count375
-\makeMPintoPDFobject=\count376
+\MPscratchCnt=\count372
+\MPscratchDim=\dimen294
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
 \everyMPtoPDFconversion=\toks79
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1433,7 +1265,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package babel Info: 'dutch' activates 'dutch' shorthands.
-(babel)             Reported on input line 159.
+(babel)             Reported on input line 163.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1469,14 +1301,11 @@ Package babel Info: 'dutch' activates 'dutch' shorthands.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 169.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 173.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 169.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 173.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1484,42 +1313,56 @@ No file "Combinatorics Notes".toc.
 \tf@toc=\write5
 \openout5 = `"Combinatorics Notes.toc"'.
 
-[2
+[1
 
-]
-Package hyperref Info: bookmark level for unknown problem defaults to 0 on input line 199.
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 204.
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 224.
- [3] [4]
-Overfull \hbox (51.45547pt too wide) in paragraph at lines 285--328
-[]$[]$ $[]$ 
- []
 
-[5] [6] [7]
-Package hyperref Info: bookmark level for unknown solution defaults to 0 on input line 400.
- [8] [9] [10] [11] [12]
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 191.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 197.
+
+/Users/ray/Book/Combinatorics Notes.tex:203: Missing { inserted.
+<to be read again> 
+                   }
+l.203 \end{proof}
+                 
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+/Users/ray/Book/Combinatorics Notes.tex:203: Missing } inserted.
+<inserted text> 
+                }
+l.203 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 \tf@thm=\write6
 \openout6 = `"Combinatorics Notes.thm"'.
 
- [13] [14] (./Combinatorics Notes.aux)
+[2] (./Combinatorics Notes.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 37945 strings out of 467525
- 846572 string characters out of 5418982
- 1509934 words of memory out of 5000000
- 66306 multiletter control sequences out of 15000+600000
- 638848 words of font info for 81 fonts, out of 8000000 for 9000
+ 36216 strings out of 467525
+ 800459 string characters out of 5418982
+ 1353219 words of memory out of 5000000
+ 64627 multiletter control sequences out of 15000+600000
+ 638203 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,12n,107p,11240b,1013s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Combinatorics Notes.pdf" (14 pages, 217556 bytes).
+ 110i,11n,107p,11240b,908s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Combinatorics Notes.pdf" (2 pages, 107544 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
- 37 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

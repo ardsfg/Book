@@ -10,6 +10,7 @@
 \usepackage{amsmath,amsthm,amssymb}
 % Include links
 \usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 % \usetikzlibrary{positioning,chains,fit,shapes,calc}
 \usepackage{forest}
@@ -22,6 +23,7 @@
 \usepackage{framed}
 \usepackage[framed]{ntheorem}
 \usepackage{xcolor}
+
 
 
 
@@ -39,11 +41,31 @@
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 
+
+\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\definecolor{darkblue}{rgb}{0,0,1}
+
+% \newenvironment{proof}{%
+%   \def\FrameCommand{%
+%     \hspace{1pt}%
+%     {\color{darkblue}\vrule width 2pt}%
+%     {\color{formalshade}\vrule width 4pt}%
+
+%   }%
+%   \MakeFramed{\advance\hsize-\width\FrameRestore}%
+%   \noindent\hspace{-4.55pt}% disable indenting first paragraph
+%   \begin{adjustwidth}{}{7pt}%
+%   \vspace{2pt}\vspace{2pt}%
+% }
+% {%
+%   \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+% }
+
 \theoremclass{Problem}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
  \newcommand{\pmbox}[1]{
-  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=green!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -52,10 +74,32 @@
         \text{#1}%
       \end{minipage}%
     };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Problem}
+    };%
     \end{tikzpicture}}
 
 \def\theoremframecommand{\pmbox}
 \newshadedtheorem{problem}{Problem}
+
+\theoremclass{Example}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+ \newcommand{\embox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=Dandelion!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Example}
+    };%
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\embox}
+\newshadedtheorem{example}{Example}
 
 
 \theoremclass{Definition}
@@ -72,6 +116,8 @@
         \text{#1}%
       \end{minipage}%
     };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Definition}
+    };%
     \end{tikzpicture}}
 
 \def\theoremframecommand{\dpmbox}
@@ -90,18 +136,40 @@
     \textit{#1}%
   \end{minipage}%
 };%\
-\node[fancytitle] at (box.north) {%
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Theorem}
 };%
 \end{tikzpicture}}
 
-\newcommand\theo{\tpmbox}\newshadedtheorem{theorem}{Theorem}
+\def\theoremframecommand{\tpmbox}
+\newshadedtheorem{theorem}{Theorem}
+
+
+\theoremclass{Proposition}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+\newcommand{\propmbox}[1]{
+\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=orange!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+\noindent%
+\begin{tikzpicture}%
+\node [tpmbox] (box){%
+  \begin{minipage}{0.95\textwidth}%
+    \textit{#1}%
+  \end{minipage}%
+};%\
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Proposition}
+};%
+\end{tikzpicture}}
+
+\def\theoremframecommand{\propmbox}
+\newshadedtheorem{proposition}{Proposition}
 
 \theoremclass{Solution}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
 
  \newcommand{\spmbox}[1]{
-  \tikzstyle{spmbox} = [rectangle, rounded corners, draw=black, inner sep=10pt]%
+  \tikzstyle{spmbox} = [rectangle, rounded corners, fill=green!5, draw=black, inner sep=10pt]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -202,6 +270,19 @@
 
 \subsection{Nonstandard Inequalities}
 
+\begin{theorem}[Holder's Inequality]
+  For complex-valued functions $f$ and $g$ and reals $p,q$ satisfying $\frac{1}{p} + \frac{1}{q} = 1$, \[\|f^p\|^{\frac{1}{p}} \|g^q\|^{\frac{1}{q}} \ge \|fg\|\]
+\end{theorem}
+
+\begin{example}
+  
+\end{example}
+
+% \begin{remark}
+%   When $p=q=2$, the inequality spits out Cauchy-Schwarz
+% \end{remark}
+
+
 \subsection{Smoothing}
 
 \subsection{Lagrange Multipliers}
@@ -226,12 +307,78 @@
 
 \subsection{Fourier Transformations}
 
+\begin{definition}[Discrete Fourier Decomposition]
+  The decomposition is a systematic breakdown of a function $f(x)$ into $\sin$ and $\cos$ via \[f(x) = \sum_{k=0}^n a_k \sin(k x) + \sum_{k=0}^n b_k \cos(kx)\] and \[a_k = \frac{2}{L} \int_0^L f(x) \sin(2\pi n k x) \mathrm dx\]\[b_k = \frac{2}{L} \int_0^L f(x) \cos(2\pi n kx) \mathrm dx\]
+\end{definition}
+
+\begin{definition}[Continuous Fourier Decomposition]
+The continuous decomposition of a function $f(x)$ is \[[x^d] f(x) = \frac{1}{2\pi}\int_{-\pi}^\pi e^{-id\theta} f(e^{i\theta}) \mathrm d\theta\]
+\end{definition}
+
+\begin{problem}[2025 CTST 15]
+Let \( X \) be a finite set of real numbers, \( d \) be a real number, and \(\lambda_1, \lambda_2, \cdots, \lambda_{2025}\) be 2025 non-zero real numbers. Define
+\[A = 
+\left\{ 
+(x_1, x_2, \cdots, x_{2025}) : x_1, x_2, \cdots, x_{2025} \in X \text{ and } \sum_{i=1}^{2025} \lambda_i x_i = d 
+\right\},\]\[B = 
+\left\{ 
+(x_1, x_2, \cdots, x_{2024}) : x_1, x_2, \cdots, x_{2024} \in X \text{ and } \sum_{i=1}^{2024} (-1)^i x_i = 0 
+\right\},\]\[C = 
+\left\{ 
+(x_1, x_2, \cdots, x_{2026}) : x_1, x_2, \cdots, x_{2026} \in X \text{ and } \sum_{i=1}^{2026} (-1)^i x_i = 0 
+\right\}.\]Show that \( |A|^2 \leq |B| \cdot |C| \).
+\end{problem}
+
+\begin{solution}
+Define $f(t) = \sum_{x\in X} t^x$ to be a generating function. Then \[|A| = \lim_{T \to \infty} \frac{1}{T} \int_0^T e^{-id\theta} \prod_{j=1}^{2025} f(e^{i\lambda_j \theta}) \mathrm d\theta\] \[|B| = \lim_{T \to \infty} \frac{1}{T} \int_0^T f(e^{-i\theta})^{2024} \mathrm d\theta\] \[|C| = \lim_{T \to \infty} \frac{1}{T} \int_0^T f(e^{-i\theta})^{2026} \mathrm d\theta\]
+\end{solution}
+
+
 \section{Analysis}
 
 \begin{theorem}[Gauss-Lucas]
-  
+Given a polnyomial $f(z) \in \mathbb C[x]$ with roots $z_1, z_2, \ldots, z_n$, its derivative $f'(z)$ with roots $w_1, w_2, \ldots, w_{n-1}$ lie within the convex hull of $z_1, \ldots, z_n$
 \end{theorem}
 
-\section{}
+% \begin{proof}
+%   Assume that $f(x)$ shares no roots with $'f(x)$ by dividing by roots. Consider \[\frac{d}{dz} \ln f(z) = \frac{f'(z)}{f(z)} = \sum_{i=1}^n \frac{1}{z - z_i}.\] Set $z \in \{w_1, \ldots, w_{n-1}\}$ to get \[\sum_{i=1}^{n} \frac{1}{w_j-z_i} = 0 \iff w_j\sum_{i=1}^n \frac{1}{|w_j-z_i|^2}=\sum_{i=1}^n \frac{z_i}{|w_j-z_i|^2}\] \[\iff w_j = \frac{\sum_{i=1}^n \frac{z_i}{|w_j-z_i|^2}}{\sum_{i=1}^n \frac{1}{|w_j-z_i|^2}}\] meaning that $w_j$ is a convex sum of the vectors $z_1, \ldots, z_n$ as needed. 
+% \end{proof}
+
+\begin{definition}[Point Derivative]
+  The point derivative of a complex-valued function $f(z)$ is \[D_\zeta f(z) = (\zeta - z)f'(z) + nf(z)\] where $\deg(f) = n$.
+\end{definition}
+
+
+\begin{proposition}[Gauss-Lucas for Point Derivative]
+  Let the roots of $D_\zeta f(z)$ be $w_1, \ldots, w_{n-1}$ and $f(z)$ be $z_1, \ldots, z_n$. Then $\max(\|w_1\|, \ldots, \|w_{n-1}\|) \le \max(\|z_1\|, \ldots, \|z_n\|)$.
+\end{proposition}
+
+\begin{problem}
+  
+\end{problem}
+
+\begin{solution}
+  
+\end{solution}
+
+\begin{problem}
+  
+\end{problem}
+
+\begin{solution}
+  
+\end{solution}
+
+% \begin{proof}
+%   Let $w$ be a root of $D_\zeta f(z)$, so \[\frac{f'(z)}{f(z)} = \frac{d}{dz} \ln f(z) =\sum_{i=1}^n \frac{1}{z_i-\zeta}= \frac{n}{z-\zeta}\] However $z \to \frac{1}{z-\zeta}$ is a mobius transformation sending a disc to another disc, and the sum of many discs is convex. We therefore have equality when $z_i$ are identical. 
+% \end{proof}
+
+
+
+\section{Algebraic Geometry}
+
+
+
+
 
 \end{document}
