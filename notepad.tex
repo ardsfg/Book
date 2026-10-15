@@ -1,0 +1,267 @@
+% !TEX root = ./Algebra_Notes.tex
+\documentclass[11pt]{scrartcl}
+
+%%%%%%%%%%%%%% LATEX SAMPLE FILE %%%%%%%%%%%%%%%%
+% A line which starts with a % sign
+% is called a COMMENT. It is IGNORED
+% by the LaTeX processor.
+
+% Include math
+\usepackage{amsmath,amsthm,amssymb}
+% Include links
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+% \usetikzlibrary{positioning,chains,fit,shapes,calc}
+\usepackage{forest}
+% \usetikzlibrary{graphs,graphdrawing,arrows.meta}
+\usepackage[utf8x]{inputenc}
+\usepackage[dutch]{babel}
+\usepackage{tikz}
+\usetikzlibrary{shadows}
+% \usegdlibrary{trees}
+\usepackage{framed}
+\usepackage[framed]{ntheorem}
+\usepackage{xcolor}
+
+
+
+
+%%%%%%%%%%%%%  THEOREMS  %%%%%%%%%%%%%%%%%
+% Let's define some theorem environments
+% To use later in the paper
+\theoremstyle{plain} % other options: definition, remark
+
+% By including [theorem], the lemma follows the numbering of theorem
+% e.g. Thm 1, Lemma 2, Thm 3, Thm 4, \dots
+\theoremstyle{definition}
+% \newtheorem{definition}{Definition} % the star prevents numbering
+
+% Remarks
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+
+\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\definecolor{darkblue}{rgb}{0,0,1}
+
+% \newenvironment{proof}{%
+%   \def\FrameCommand{%
+%     \hspace{1pt}%
+%     {\color{darkblue}\vrule width 2pt}%
+%     {\color{formalshade}\vrule width 4pt}%
+
+%   }%
+%   \MakeFramed{\advance\hsize-\width\FrameRestore}%
+%   \noindent\hspace{-4.55pt}% disable indenting first paragraph
+%   \begin{adjustwidth}{}{7pt}%
+%   \vspace{2pt}\vspace{2pt}%
+% }
+% {%
+%   \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+% }
+
+\theoremclass{Problem}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+ \newcommand{\pmbox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=green!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Problem}
+    };%
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\pmbox}
+\newshadedtheorem{problem}{Problem}
+
+\theoremclass{Example}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+ \newcommand{\embox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=Dandelion!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Example}
+    };%
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\embox}
+\newshadedtheorem{example}{Example}
+
+
+\theoremclass{Definition}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+
+ \newcommand{\dpmbox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Definition}
+    };%
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\dpmbox}
+\newshadedtheorem{definition}{Definition}
+    
+\theoremclass{Theorem}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+\newcommand{\tpmbox}[1]{
+\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+\noindent%
+\begin{tikzpicture}%
+\node [tpmbox] (box){%
+  \begin{minipage}{0.95\textwidth}%
+    \textit{#1}%
+  \end{minipage}%
+};%\
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Theorem}
+};%
+\end{tikzpicture}}
+
+\def\theoremframecommand{\tpmbox}
+\newshadedtheorem{theorem}{Theorem}
+
+
+\theoremclass{Proposition}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+\newcommand{\propmbox}[1]{
+\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=orange!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+\noindent%
+\begin{tikzpicture}%
+\node [tpmbox] (box){%
+  \begin{minipage}{0.95\textwidth}%
+    \textit{#1}%
+  \end{minipage}%
+};%\
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Proposition}
+};%
+\end{tikzpicture}}
+
+\def\theoremframecommand{\propmbox}
+\newshadedtheorem{proposition}{Proposition}
+
+\theoremclass{Solution}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+
+ \newcommand{\spmbox}[1]{
+  \tikzstyle{spmbox} = [rectangle, rounded corners, fill=green!5, draw=black, inner sep=10pt]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [spmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right=10pt] at (box.north west) {\textbf{Solution}%
+    };%
+    \end{tikzpicture}}
+ 
+\def\theoremframecommand{\spmbox}
+\newshadedtheorem{solution}{Solution}
+
+% \begin{figure}
+%     \centering%
+%     \begin{tikzpicture}
+%         \node at (0,0) (a) {a};
+%         \node at (1,0) (b) {b};
+%         \draw (a)--(b);
+
+%         \node[above = \baselineskip of current bounding box] {%
+%             \begin{minipage}{0.9\linewidth}
+%                 Text or whatever you want to put here.
+
+%                 \begin{equation*}
+%                     1 = 2
+%                 \end{equation*}
+%             \end{minipage}%
+%         };
+%         \draw (current bounding box.north west) rectangle (current bounding box.south east);
+%     \end{tikzpicture}
+% \end{figure}
+
+
+%%%%%%%%%%%%%%  PAGE SETUP %%%%%%%%%%%%%%%%%
+% LaTeX has big default margins
+\usepackage[margin=1.5in]{geometry}
+
+% The following sets up some headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Algebra Notes} % Left Header
+\rhead{\thepage} % Right Header
+\cfoot{} % Center Foot (empty)
+
+%%%%%%%%%%%%% SHORTCUTS %%%%%%%%%%%%%%%%%%%%
+% You can define your own shortcuts too.
+% Examples of custom commands
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+
+% Document content begins here
+\begin{document}
+% \usegdlibrary{trees}
+
+
+
+% Set up a title
+\title{Notepad}
+\author{Raymond Xu}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+  % This is an example of a \LaTeX\ document,
+  % complete with theorems and headers and the like.
+\end{abstract}
+
+% This line makes a ToC
+\tableofcontents
+
+% This line starts a new page
+\eject
+
+\begin{problem}[2016 AMO 2]
+
+\end{problem}
+
+\begin{solution}
+    We will only consider primes $k+1 \le p \le 2k-1$. Clearly if the prime satisfies $1 \le p \le k$, then $(k^2)!$ has a much larger p-adic valuation. Then do some casework on $p=2$ with $k$ even and $k$ odd. Now suppose an odd prime $p$ satisfies $k+1 \le p \le 2k-1$. Then the $p-$adic valuation of the product is like $2k-p$, but also note that $p(2k-p) \le k^2$ so we're done. 
+    We will show that the p-adic valueation is nonegative for all $p$. Note that \[\nu_p((k^2)!) = \sum_{i=1}^\infty \left \lfloor \frac{k^2}{p^i} \right \rfloor\] and \[\]
+\end{solution}
+
+
+\begin{problem}[21 IMO 2]
+    
+\end{problem}
+
+\begin{solution}
+    
+\end{solution}
+
+\end{document}

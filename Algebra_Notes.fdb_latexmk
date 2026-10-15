@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1791854277.88317 "/Users/ray/Book/Algebra_Notes.tex" "Algebra_Notes.pdf" "Algebra_Notes" 1791854281.85817 0
-  "/Users/ray/Book/Algebra_Notes.tex" 1791854273.83903 11408 d9abc4482a24f5e585068ed225ceb11e ""
+["pdflatex"] 1792039784.54734 "/Users/ray/Book/Algebra_Notes.tex" "Algebra_Notes.pdf" "Algebra_Notes" 1792039787.58623 0
+  "/Users/ray/Book/Algebra_Notes.tex" 1792039784.2604 16181 4e8a2fa9de7dfb7db63149cd8f5c404c ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -35,7 +35,9 @@
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb" 1248133631 28902 2f5c04fd2884d1878057baa5aad22765 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
+  "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2026/texmf-dist/tex/generic/babel-dutch/dutch.ldf" 1630268686 6785 9a88117cf3b054cf3e3476265f93dce2 ""
@@ -211,9 +213,9 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1777343030 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1774209607 3636776 dc5fa9b6b1453b9d196cd42edf876004 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "Algebra_Notes.aux" 1791854281.57808 10243 ef4b4c1059f254e8af7d2d7f2be4b785 "pdflatex"
-  "Algebra_Notes.tex" 1791854273.83903 11408 d9abc4482a24f5e585068ed225ceb11e ""
-  "Algebra_Notes.toc" 1791854281.58559 1941 4ed484d1f0a13ccf913771bd32fff20b "pdflatex"
+  "Algebra_Notes.aux" 1792039787.39838 10772 ada30bf549694df26dc7c4816ed98544 "pdflatex"
+  "Algebra_Notes.tex" 1792039784.2604 16181 4e8a2fa9de7dfb7db63149cd8f5c404c ""
+  "Algebra_Notes.toc" 1792039787.40299 1953 3a8385e867b1915859d812654d5c99a0 "pdflatex"
   (generated)
   "Algebra_Notes.aux"
   "Algebra_Notes.log"

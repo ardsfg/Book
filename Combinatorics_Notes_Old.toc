@@ -1,0 +1,23 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {section}{\numberline {1}Fundamentals of Combinatorics}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Permutations}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Pigeonhole}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Bijection}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Generating Functions}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Recursion}{3}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Group Theory}{3}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Advanced Topics}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Reduction}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Induction}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Invariants and Monovariants}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Graph Theory}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Inequalities}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Constructions}{11}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Games}{13}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Sledgehammers}{13}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.1}Zeckendorf Representation}{13}{subsubsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2.8.2}Wythoff Array}{13}{subsubsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.9}Algorithms}{13}{subsection.2.9}%
+\contentsline {section}{\numberline {3}About the Author}{14}{section.3}%
+\contentsline {section}{\numberline {4}References and Further Reading}{14}{section.4}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,4 +1,4 @@
-% !TEX root = ./Combinatorics Notes.tex
+% !TEX root = ./Combinatorics_Notes_Old.tex
 \documentclass[11pt]{scrartcl}
 
 %%%%%%%%%%%%%% LATEX SAMPLE FILE %%%%%%%%%%%%%%%%
@@ -10,6 +10,7 @@
 \usepackage{amsmath,amsthm,amssymb}
 % Include links
 \usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{positioning,chains,fit,shapes,calc}
 \usepackage{forest}
@@ -18,10 +19,11 @@
 \usepackage[dutch]{babel}
 \usepackage{tikz}
 \usetikzlibrary{shadows}
-\usegdlibrary{trees}
+% \usegdlibrary{trees}
 \usepackage{framed}
 \usepackage[framed]{ntheorem}
 \usepackage{xcolor}
+
 
 
 
@@ -39,11 +41,31 @@
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 
+
+\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\definecolor{darkblue}{rgb}{0,0,1}
+
+% \newenvironment{proof}{%
+%   \def\FrameCommand{%
+%     \hspace{1pt}%
+%     {\color{darkblue}\vrule width 2pt}%
+%     {\color{formalshade}\vrule width 4pt}%
+
+%   }%
+%   \MakeFramed{\advance\hsize-\width\FrameRestore}%
+%   \noindent\hspace{-4.55pt}% disable indenting first paragraph
+%   \begin{adjustwidth}{}{7pt}%
+%   \vspace{2pt}\vspace{2pt}%
+% }
+% {%
+%   \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+% }
+
 \theoremclass{Problem}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
  \newcommand{\pmbox}[1]{
-  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=green!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -52,10 +74,32 @@
         \text{#1}%
       \end{minipage}%
     };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Problem}
+    };%
     \end{tikzpicture}}
 
 \def\theoremframecommand{\pmbox}
 \newshadedtheorem{problem}{Problem}
+
+\theoremclass{Example}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+ \newcommand{\embox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=Dandelion!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Example}
+    };%
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\embox}
+\newshadedtheorem{example}{Example}
 
 
 \theoremclass{Definition}
@@ -72,6 +116,8 @@
         \text{#1}%
       \end{minipage}%
     };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Definition}
+    };%
     \end{tikzpicture}}
 
 \def\theoremframecommand{\dpmbox}
@@ -90,18 +136,40 @@
     \textit{#1}%
   \end{minipage}%
 };%\
-\node[fancytitle] at (box.north) {%
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Theorem}
 };%
 \end{tikzpicture}}
 
-\newcommand\theo{\tpmbox}\newshadedtheorem{theorem}{Theorem}
+\def\theoremframecommand{\tpmbox}
+\newshadedtheorem{theorem}{Theorem}
+
+
+\theoremclass{Proposition}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+\newcommand{\propmbox}[1]{
+\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=orange!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+\noindent%
+\begin{tikzpicture}%
+\node [tpmbox] (box){%
+  \begin{minipage}{0.95\textwidth}%
+    \textit{#1}%
+  \end{minipage}%
+};%\
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Proposition}
+};%
+\end{tikzpicture}}
+
+\def\theoremframecommand{\propmbox}
+\newshadedtheorem{proposition}{Proposition}
 
 \theoremclass{Solution}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
 
  \newcommand{\spmbox}[1]{
-  \tikzstyle{spmbox} = [rectangle, rounded corners, draw=black, inner sep=10pt]%
+  \tikzstyle{spmbox} = [rectangle, rounded corners, fill=green!5, draw=black, inner sep=10pt]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -145,7 +213,7 @@
 % The following sets up some headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Combinatorics Notes} % Left Header
+\lhead{Algebra Notes} % Left Header
 \rhead{\thepage} % Right Header
 \cfoot{} % Center Foot (empty)
 

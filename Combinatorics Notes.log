@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  11 OCT 2026 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  14 OCT 2026 23:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1157,10 +1157,39 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
 \c@remark=\count360
 \c@problem=\count361
+
+
+/Users/ray/Book/Combinatorics Notes.tex:80: LaTeX Error: Command \pmbox already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80     \end{tikzpicture}}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/ray/Book/Combinatorics Notes.tex:83: LaTeX Error: Command \proof already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \newshadedtheorem{proof}
+                             {Proof}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 \c@definition=\count362
 \c@theorem=\count363
 \c@solution=\count364
- (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
  (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
@@ -1190,7 +1219,7 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              `\addtokomafont' for the page style elements need
 (scrartcl)              explicite user intervention to work.
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `fancyhdr' on input line 151.
+(scrartcl)              package `fancyhdr' on input line 181.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
@@ -1217,7 +1246,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 163.
+(scrartcl)           before \begin{document} on input line 193.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -1226,25 +1255,25 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 )) (./Combinatorics Notes.aux)
 \openout1 = `"Combinatorics Notes.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-Package hyperref Info: Link coloring OFF on input line 163.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+Package hyperref Info: Link coloring OFF on input line 193.
  (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count369
@@ -1265,7 +1294,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package babel Info: 'dutch' activates 'dutch' shorthands.
-(babel)             Reported on input line 163.
+(babel)             Reported on input line 193.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1301,11 +1330,11 @@ Package babel Info: 'dutch' activates 'dutch' shorthands.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 173.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 203.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 173.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 203.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1317,23 +1346,23 @@ No file "Combinatorics Notes".toc.
 
 
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 191.
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 197.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 221.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 227.
 
-/Users/ray/Book/Combinatorics Notes.tex:203: Missing { inserted.
+/Users/ray/Book/Combinatorics Notes.tex:233: Missing { inserted.
 <to be read again> 
                    }
-l.203 \end{proof}
+l.233 \end{proof}
                  
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
 so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
-/Users/ray/Book/Combinatorics Notes.tex:203: Missing } inserted.
+/Users/ray/Book/Combinatorics Notes.tex:233: Missing } inserted.
 <inserted text> 
                 }
-l.203 \end{proof}
+l.233 \end{proof}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1351,15 +1380,15 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 36216 strings out of 467525
- 800459 string characters out of 5418982
- 1353219 words of memory out of 5000000
- 64627 multiletter control sequences out of 15000+600000
+ 36224 strings out of 467525
+ 800596 string characters out of 5418982
+ 1353275 words of memory out of 5000000
+ 64635 multiletter control sequences out of 15000+600000
  638203 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,11n,107p,11240b,908s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Combinatorics Notes.pdf" (2 pages, 107544 bytes).
+Output written on "Combinatorics Notes.pdf" (2 pages, 107705 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream

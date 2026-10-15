@@ -287,9 +287,21 @@
 
 \subsection{Lagrange Multipliers}
 
-\section{Polynomials}
+\section{Polynomials + Sequences}
 
 \subsection{Asymptotic Behavior}
+
+\begin{definition}[Omega and O notation]
+  $O(f(N))$, where $\lim_{N \to \infty} f(n) = \infty$, means that something is bounded by $c f(N)$ as $N\to \infty$ for sufficiently large $c$. $\Omega(f(n))$ means tha something is on the order of $f(n)$. 
+\end{definition}
+
+\begin{problem}[2026 India-Singapore Friendly Contest P5]
+  Suppose that there is a sequence of positive reals $a_0,a_1,\dots$ such that for all sufficiently large $n$,$$\sum_{i=0}^n\binom{n}{i}a_ia_{n-i}\ge 2.01^n\cdot a_n.$$Show that there exists a positive integer $i$ satisfying $a_i\le 0.1^{6767}$.
+\end{problem}
+
+\begin{solution}
+  Assume for contradiction that $a_n \ge c$ for some constant $c$ and all $n$. Then $\frac{a_i a_{n-i}}{a_n}$ must average to $(1.005)^n$, so $a_n$ is unbounded and $a_n = \Omega((1.005)^n)$. However, this means that $a_n$ is strictly increasing, contradiction. 
+\end{solution}
 
 \subsection{Linear Constraints}
 
@@ -330,7 +342,8 @@ Let \( X \) be a finite set of real numbers, \( d \) be a real number, and \(\la
 \end{problem}
 
 \begin{solution}
-Define $f(t) = \sum_{x\in X} t^x$ to be a generating function. Then \[|A| = \lim_{T \to \infty} \frac{1}{T} \int_0^T e^{-id\theta} \prod_{j=1}^{2025} f(e^{i\lambda_j \theta}) \mathrm d\theta\] \[|B| = \lim_{T \to \infty} \frac{1}{T} \int_0^T f(e^{-i\theta})^{2024} \mathrm d\theta\] \[|C| = \lim_{T \to \infty} \frac{1}{T} \int_0^T f(e^{-i\theta})^{2026} \mathrm d\theta\]
+Define $f(t) = \sum_{x\in X} t^x$ to be a generating function. Then \[|A| = \lim_{T \to \infty} \frac{1}{T} \int_0^T e^{-id\theta} \prod_{j=1}^{2025} f(e^{i\lambda_j \theta}) \mathrm d\theta\] \[|B| = \lim_{T \to \infty} \frac{1}{T} \int_0^T f(e^{-i\theta})^{1012}f(e^{i\theta})^{1012} \mathrm d\theta = \lim_{T \to \infty} \frac{1}{T} \int_0^T |f(e^{i\theta})^{2024} \mathrm d\theta|\] \[|C| = \lim_{T \to \infty} \frac{1}{T} \int_0^T f(e^{-i\theta})^{1013}f(e^{i\theta})^{1013} \mathrm d\theta = \lim_{T \to \infty} \frac{1}{T} \int_0^T |f(e^{i\theta})^{2026} \mathrm d\theta\] so 
+\[|B||C| \ge \left (\lim_{T \to \infty}\frac{1}{T} \int_0^T |f(e^{i\theta})^{2025}| \mathrm d\theta \right )^2\] by Cauchy-Schwarz. To deal with $A$, write \[|A| = \lim_{T \to \infty} \frac{1}{T} \int_0^T e^{-id\theta} \prod_{j=1}^{2025} f(e^{i\lambda_j \theta}) \mathrm d\theta\] \[ \le \left ( \lim_{T \to \infty} \frac{1}{T} \prod_{j=1}^{2025} \int_0^T \left ( e^{-id\theta} f(e^{i\lambda_j \theta})\right )^{2025} \mathrm d\theta \right )^{\frac{1}{2025}} \le \lim_{T \to \infty}\frac{1}{T} \int_0^T |f(e^{i\theta})^{2025}| \mathrm d\theta\] as desired
 \end{solution}
 
 
@@ -353,20 +366,27 @@ Given a polnyomial $f(z) \in \mathbb C[x]$ with roots $z_1, z_2, \ldots, z_n$, i
   Let the roots of $D_\zeta f(z)$ be $w_1, \ldots, w_{n-1}$ and $f(z)$ be $z_1, \ldots, z_n$. Then $\max(\|w_1\|, \ldots, \|w_{n-1}\|) \le \max(\|z_1\|, \ldots, \|z_n\|)$.
 \end{proposition}
 
-\begin{problem}
-  
+\begin{problem}[2026 CTST 3]
+  Let integers \(n > k > 1\), and let \(z_1, z_2, \ldots, z_n\) be complex numbers with modulus at most 1. Prove that
+\[
+\left| \binom{n}{k}  - \sum_{1 \le i_1 < i_2 < \cdots < i_k \le n} z_{i_1} z_{i_2} \cdots z_{i_k} \right| \le \binom{n-1}{k-1}  \left| n - \sum_{i=1}^n z_i \right|,
+\]and find the condition for equality.
 \end{problem}
 
 \begin{solution}
-  
+\textbf{Claim: }It suffices to consider the case $n=k$
+\textit{Proof. }Let $P'(z)$ be the derivative of $P(z)$, and suppose that the claim holds for $(n-1,k)$. We will show it holds for $(n,k)$. Let $P(z) = z^n + a_{n-1}z^{n-1} + \ldots + a_0 = (z-z_1)(z-z_2)\ldots$ so that $P'(z) = nz^{n-1} + \ldots + a_1 = n(z-\omega_1)(z-\omega_2)\ldots (z-\omega_{n-1})$. Then \[\left | {n-1 \choose k-1} - \frac{a_{n-k}}{n}\right | \le {n-2 \choose k-2} \left | n-1 - \frac{a_{n-1}}{n} \right |\] \[\implies \left | {n \choose k} - \sum_{1\le i_1 < \ldots < i_k < n} z_{i_1}\ldots z_{i_k} \right | \le \frac{k-1}{k} {n-1 \choose k-1} \left |n - \sum_{i=1}^n z_i\right |\] as desired. Note that there is an injective mapping between every polynomial with degree $n$ and its derivative, so this suffices because the roots $\omega_1, \omega_2, \ldots, \omega_{n-1}$ must be contained within the hull of $z_1, z_2, \ldots, z_n$ due to Gauss-Lucas.
+
+\textbf{Claim: }$\left | 1 - \prod_{i=1}^n z_i \right | \le \left | n - \sum_{i=1}^n z_i \right |$ and equality occurs when $z_i = 1$ for all $1 \le i\le n$
+\textit{Proof. }Consider the point derivative function $D_\zeta f(z) = (\zeta - z)f'(z) + nf(z)$ where $n$ is the degree of $z$. Consider the polynomial $P(z) = (z-1)^n + a_{n-1}z^{n-1} + \ldots + a_0$ and note that $|a_0| = |1 - \prod z_i|$ and $|a_{n-1}| = |n - \sum z_i|$. Suppose for the sake of contradiction that $|a_{n-1}| < |a_0| \le 1$. If the roots of $z$ have modulus at most $1$, then the point derivative must map $(z_1, z_2, \ldots, z_n) \to (\omega_1, \ldots, \omega_{n-1})$ such that $\max( \omega_i) \le 1$. We apply the derivative once to remove the $(z-1)^n$ term and are left with $D_{1} f(z) = a_{n-1}z^{n-1} + ((n-1)a_{n-1} + 2a_{n-2})z^{n-2} + \ldots + (a_{k} (n-k) + a_{k+1}(k+1)) + \ldots + (a_1 + n a_0)$ where all its roots lie within the unit disc. Then we will show that $|a_k| \ge {n-1 \choose k} |a_0|$, meaning that $|a_{n-1}| \ge |a_0|$, giving the result. We know that $|a_1| \ge |a_0 - na_0| = |a_0|(n-1)$. Then if $|a_k| \ge {n-1 \choose k}|a_0|$, then $|(n-k)a_k + (k+1)a_{k+1}| \le 1 \implies a_{k+1} \ge {n-1 \choose k}(n-k)|a_0| - |a_0| \ge {n-1 \choose k+1}|a_0|$. Therefore, $a_{n-1} \ge |a_0|$, a contradiction with equality when $a_0 = 0$. From here, it's easy to check that $(z_1, z_2, \ldots, z_n) = (\underbrace{1,1,\ldots}_{n})$ is the only equality case. 
 \end{solution}
 
-\begin{problem}
-  
+\begin{problem}[2018 Putnam B2]
+    Let $n$ be a positive integer, and let $f_n(z) = n + (n-1)z + (n-2)z^2 + \dots + z^{n-1}$. Prove that $f_n$ has no roots in the closed unit disk $\{z \in \mathbb{C}: |z| \le 1\}$.
 \end{problem}
 
 \begin{solution}
-  
+  It suffices to show $z^{n-1}f_n(\frac{1}{z})$ has no roots $z > 1$. Integrate to get roots of unity, so by Gauss-Lucas, all roots must be contained within the unit disc, contradiction. 
 \end{solution}
 
 % \begin{proof}
