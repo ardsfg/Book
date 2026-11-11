@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1794369101.05695 "/Users/ray/Book/Quantum.tex" "Quantum.pdf" "Quantum" 1794369103.23622 0
-  "/Users/ray/Book/Quantum.tex" 1794369097.8046 6857 13efdee593091a770f5edbb2a5c11f8d ""
+["pdflatex"] 1794370912.94273 "/Users/ray/Book/Quantum.tex" "Quantum.pdf" "Quantum" 1794370915.67038 0
+  "/Users/ray/Book/Quantum.tex" 1794370912.59419 6854 71e515d099c656cca7d2fd9529f0f2a7 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -215,9 +215,9 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1777343030 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1774209607 3636776 dc5fa9b6b1453b9d196cd42edf876004 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "Quantum.aux" 1794369103.10383 1219 59e0db4557b905a4e94bb7d991e29837 "pdflatex"
-  "Quantum.pre" 1794369102.61979 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Quantum.tex" 1794369097.8046 6857 13efdee593091a770f5edbb2a5c11f8d ""
+  "Quantum.aux" 1794370915.53425 1219 59e0db4557b905a4e94bb7d991e29837 "pdflatex"
+  "Quantum.pre" 1794370915.03507 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Quantum.tex" 1794370912.59419 6854 71e515d099c656cca7d2fd9529f0f2a7 ""
   (generated)
   "Quantum.aux"
   "Quantum.log"
