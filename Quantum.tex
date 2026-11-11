@@ -1,0 +1,142 @@
+% !TEX root = ./Quantum.tex
+\documentclass[11pt]{scrartcl}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{epigraph}
+\usepackage[colorlinks]{hyperref}
+\usepackage{microtype}
+\usepackage{mathtools}
+\usepackage[headsepline]{scrlayer-scrpage}
+\usepackage{thmtools}
+\usepackage{listings}
+\usepackage{derivative}
+\renewcommand{\epigraphsize}{\scriptsize}
+\renewcommand{\epigraphwidth}{60ex}
+\addtolength{\textheight}{3.14cm}
+\ihead{\footnotesize\textbf{Quantum Notes}}
+\ohead{\footnotesize Updated \today}
+\providecommand{\clubs}[1]{$#1\clubsuit$}
+\providecommand{\clubg}[1]{\bgroup\color{green!40!black}[$#1\clubsuit$]\egroup}
+\newcommand{\lcm}{\text{lcm}}
+
+\providecommand{\ol}{\overline}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\half}{\frac{1}{2}}
+\providecommand{\dang}{\measuredangle} %% Directed angle
+\providecommand{\CC}{\mathbb C}
+\providecommand{\FF}{\mathbb F}
+\providecommand{\NN}{\mathbb N}
+\providecommand{\QQ}{\mathbb Q}
+\providecommand{\RR}{\mathbb R}
+\providecommand{\ZZ}{\mathbb Z}
+\providecommand{\dg}{^\circ}
+\providecommand{\ii}{\item}
+\providecommand{\alert}{\textbf}
+\providecommand{\opname}{\operatorname}
+\providecommand{\ts}{\textsuperscript}
+\DeclareMathOperator{\sign}{sign}
+% hacks for arc
+\providecommand{\tarc}{\mbox{\large$\frown$}}
+\providecommand{\arc}[1]{\stackrel{\tarc}{#1}}
+\reversemarginpar
+\providecommand{\printpuid}[1]{\marginpar{\href{https://otis.evanchen.cc/arch/#1}{\ttfamily\footnotesize\color{green!40!black}#1}}}
+
+\mdfdefinestyle{mdbluebox}{roundcorner=10pt,innerbottommargin=9pt,
+    linecolor=blue,backgroundcolor=TealBlue!5,}
+\declaretheoremstyle[headfont=\sffamily\bfseries\color{MidnightBlue},
+    mdframed={style=mdbluebox},]{thmbluebox}
+\mdfdefinestyle{mdredbox}{frametitlefont=\bfseries,innerbottommargin=8pt,
+    nobreak=true,backgroundcolor=Salmon!5,linecolor=RawSienna,}
+\declaretheoremstyle[headfont=\bfseries\color{RawSienna},
+    mdframed={style=mdredbox},headpunct={\\[3pt]},postheadspace=0pt,]{thmredbox}
+\mdfdefinestyle{mdgreenbox}{linecolor=ForestGreen,backgroundcolor=ForestGreen!5,
+    linewidth=2pt,rightline=false,leftline=true,topline=false,bottomline=false,}
+\declaretheoremstyle[headfont=\bfseries\sffamily\color{ForestGreen!70!black},
+    mdframed={style=mdgreenbox},headpunct={ --- },]{thmgreenbox}
+\mdfdefinestyle{mdblackbox}{linecolor=black,backgroundcolor=RedViolet!5!gray!5,
+    linewidth=3pt,rightline=false,leftline=true,topline=false,bottomline=false,}
+\declaretheoremstyle[mdframed={style=mdblackbox}]{thmblackbox}
+\declaretheorem[style=thmredbox,name=Problem]{problem}
+\declaretheorem[style=thmredbox,name=Required Problem,sibling=problem]{reqproblem}
+\declaretheorem[style=thmbluebox,name=Theorem,numberwithin=problem]{theorem}
+\declaretheorem[style=thmbluebox,name=Lemma,sibling=theorem]{lemma}
+\declaretheorem[style=thmbluebox,name=Theorem,numbered=no]{theorem*}
+\declaretheorem[style=thmbluebox,name=Lemma,numbered=no]{lemma*}
+\declaretheorem[style=thmgreenbox,name=Claim,sibling=theorem]{claim}
+\declaretheorem[style=thmgreenbox,name=Claim,numbered=no]{claim*}
+\declaretheorem[style=thmblackbox,name=Remark,sibling=theorem]{remark}
+\declaretheorem[style=thmblackbox,name=Remark,numbered=no]{remark*}
+\declaretheorem[style=thmgreenbox,name=Definition,sibling=theorem]{definition}
+\declaretheorem[style=thmgreenbox,name=Definition,numbered=no]{definition*}
+\declaretheorem[style=thmblackbox,name=Example,sibling=theorem]{example}
+\declaretheorem[style=thmblackbox,name=Example,numbered=no]{example*}
+
+\newenvironment{walkthrough}{\noindent\textbf{\color{green!40!black}Walkthrough.}}{}
+\newlist{walk}{enumerate}{3}
+\setlist[walk]{label=\bfseries (\alph*)}
+\newenvironment{subproof}[1][Proof]{%
+\begin{proof}[#1] \renewcommand{\qedsymbol}{$\blacksquare$}}%
+{\end{proof}}
+\newenvironment{soln}{\begin{proof}[Solution]}{\end{proof}}
+\newenvironment{derivation}[1][Derivation]{%
+\begin{derivation}[#1] \renewcommand{\qedsymbol}{$\blacksquare$}}%
+{\end{derivation}}
+
+\usepackage{asymptote}
+\begin{asydef}
+size(8cm); // set a reasonable default
+usepackage("amsmath");
+usepackage("amssymb");
+settings.tex="pdflatex";
+settings.outformat="pdf";
+import geometry;
+void filldraw(picture pic = currentpicture, conic g, pen fillpen=defaultpen, pen drawpen=defaultpen) { filldraw(pic, (path) g, fillpen, drawpen); }
+void fill(picture pic = currentpicture, conic g, pen p=defaultpen) { filldraw(pic, (path) g, p); }
+pair foot(pair P, pair A, pair B) { return foot(triangle(A,B,P).VC); }
+pair centroid(pair A, pair B, pair C) { return (A+B+C)/3; }
+\end{asydef}
+
+\newcommand{\goals}[2]{\bgroup
+\sffamily\small \emph{Instructions}: Solve \clubg{#1}.
+If you have time, solve \clubg{#2}.\egroup\par}
+%% 426c616e6b204c615465587e
+\begin{document}
+\title{Analytical Mechanics}
+\subtitle{Prof. Zarate}
+\author{Raymond Xu}
+\date{\today}
+\maketitle
+
+% ========================================
+
+
+\section{Review}
+
+\begin{theorem}[Photoelectric and de Broglie Hypothesis]
+    The energy of a wave is given by \[E = h f\] where $h$ is Planck's Constant and $f$ is the frequency. Furthermore, the momentum is given by \[p = \frac{E}{c} = \frac{h}{\lambda}\] where $\lambda = \frac{c}{f}$ is the wave length. We may substitute $k = \frac{2\pi}{\lambda}$ and $\omega = 2\pi f$ so where $k$ and $\omega$ differ by a factor of $c$ so that \[E = \hbar \omega, p = \hbar k\] 
+\end{theorem}
+
+Furthermore, we may express any wave function as $\psi(x,t) = e^{i(xk-t\omega)}$. 
+
+\begin{proof}
+    Take a Galilean transformation with respect to $x$ to get $x = x' - vt$ where $\psi$ has $x$ period $\lambda$, so Raise $\psi(x,t) = e^{i(xk - \omega t)}$ to get an invariant. 
+\end{proof}
+
+Therefore, the momentum operator is $-i \hbar \frac{\partial}{\partial x}$, and the Hamiltonian operator for the single wave \[\hat{H} = -\frac{\hbar^2}{2m} \nabla^2 + V(r,t)\] where $\nabla = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial}{\partial z^2}$. Furthermore, we may write $\hbar \omega = i \frac{\partial}{\partial t}$.
+
+\begin{theorem}[Schrodinger Equation]
+    If $\Psi$ is a wave function, then \[i \hbar \frac{\partial }{\partial t} \Psi(x,t) = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2}\Psi(x,t) + V(x,t) \Psi(x,t)\] where $V$ is the potential energy of the wave. 
+\end{theorem}
+
+\begin{proof}
+    Consider the Hamiltonian operator of a particle \[\]
+    Let $\Psi = e^{xk + t\omega}$. Start with the classical \[\frac{p^2}{2m} + V(x,t) = E\] \[\frac{p^2}{2m} \Psi(x,t) + V(x,t) \Psi = hf \Psi(x,t)\] \[-\frac{\hbar^2}{2m} \frac{\partial}{\partial^2} \Psi(x,t) + V(x,t)\Psi(v,t) = i\frac{\partial}{\partial t} \Psi(x,t)\]
+\end{proof}
+
+\begin{definition}[Continuous Linear Operator]
+    We denote   
+\end{definition}
+
+\end{document}

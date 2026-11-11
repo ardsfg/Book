@@ -19,7 +19,8 @@
 \contentsline {subsection}{\numberline {3.3}Interpolation}{3}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Misc}{3}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Finite Differences}{3}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Fourier Transformations}{3}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Fourier Transformations}{4}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Analysis}{5}{section.5}%
-\contentsline {section}{\numberline {6}Algebraic Geometry}{7}{section.6}%
+\contentsline {section}{\numberline {6}Abstract Algebra}{8}{section.6}%
+\contentsline {section}{\numberline {7}Algebraic Geometry}{8}{section.7}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

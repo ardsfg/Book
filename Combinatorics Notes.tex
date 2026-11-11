@@ -7,9 +7,10 @@
 % by the LaTeX processor.
 
 % Include math
-\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsmath,amssymb}
 % Include links
 \usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 % \usetikzlibrary{positioning,chains,fit,shapes,calc}
 \usepackage{forest}
@@ -40,35 +41,51 @@
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\definecolor{darkblue}{rgb}{0,0,1}
+
+% \newenvironment{proof}{%
+%   \def\FrameCommand{%
+%     \hspace{1pt}%
+%     {\color{darkblue}\vrule width 2pt}%
+%     {\color{formalshade}\vrule width 4pt}%
+
+%   }%
+%   \MakeFramed{\advance\hsize-\width\FrameRestore}%
+%   \noindent\hspace{-4.55pt}% disable indenting first paragraph
+%   \begin{adjustwidth}{}{7pt}%
+%   \vspace{2pt}\vspace{2pt}%
+% }
+% {%
+%   \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+% }
 
 \theoremclass{Problem}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
  \newcommand{\pmbox}[1]{
-  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=green!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
     \node [pmbox] (box){%
-      \begin{minipage}{0.95\textwidth}%
+      \begin{minipage}{\textwidth}%
         \text{#1}%
       \end{minipage}%
     };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Problem}
+    };%
     \end{tikzpicture}}
 
 \def\theoremframecommand{\pmbox}
 \newshadedtheorem{problem}{Problem}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% proofs
-
 \theoremclass{Proof}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
- \newcommand{\pmbox}[1]{
-  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+ \newcommand{\pppmbox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=cyan!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -77,12 +94,33 @@
         \text{#1}%
       \end{minipage}%
     };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Proof}
+    };%
     \end{tikzpicture}}
 
-\def\theoremframecommand{\pmbox}
+\def\theoremframecommand{\pppmbox}
 \newshadedtheorem{proof}{Proof}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremclass{Example}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+ \newcommand{\embox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=Dandelion!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Example}
+    };%
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\embox}
+\newshadedtheorem{example}{Example}
+
 
 \theoremclass{Definition}
 \theoremstyle{empty}
@@ -98,22 +136,19 @@
         \text{#1}%
       \end{minipage}%
     };%\
-    \node[fancytitle] at (box.north) {\textbf{Definition}
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Definition}
     };%
     \end{tikzpicture}}
 
 \def\theoremframecommand{\dpmbox}
 \newshadedtheorem{definition}{Definition}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
 \theoremclass{Theorem}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
 \newcommand{\tpmbox}[1]{
 \tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
-\tikzstyle{fancytitle1} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+\tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
 \noindent%
 \begin{tikzpicture}%
 \node [tpmbox] (box){%
@@ -121,21 +156,60 @@
     \textit{#1}%
   \end{minipage}%
 };%\
-\node[fancytitle1] at (box.north) {\textbf{Theorem}
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Theorem}
 };%
 \end{tikzpicture}}
 
 \def\theoremframecommand{\tpmbox}
 \newshadedtheorem{theorem}{Theorem}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremclass{Lemma}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+\newcommand{\lmbox}[1]{
+\tikzstyle{lmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+\noindent%
+\begin{tikzpicture}%
+\node [lmbox] (box){%
+  \begin{minipage}{0.95\textwidth}%
+    \textit{#1}%
+  \end{minipage}%
+};%\
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Lemma}
+};%
+\end{tikzpicture}}
+
+\def\theoremframecommand{\lmbox}
+\newshadedtheorem{lemma}{Theorem}
+
+
+\theoremclass{Proposition}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+\newcommand{\propmbox}[1]{
+\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=orange!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+\noindent%
+\begin{tikzpicture}%
+\node [tpmbox] (box){%
+  \begin{minipage}{0.95\textwidth}%
+    \textit{#1}%
+  \end{minipage}%
+};%\
+\node[fancytitle, right = 10pt] at (box.north west) { \textbf{Proposition}
+};%
+\end{tikzpicture}}
+
+\def\theoremframecommand{\propmbox}
+\newshadedtheorem{proposition}{Proposition}
 
 \theoremclass{Solution}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
 
  \newcommand{\spmbox}[1]{
-  \tikzstyle{spmbox} = [rectangle, rounded corners, draw=black, inner sep=10pt]%
+  \tikzstyle{spmbox} = [rectangle, rounded corners, fill=green!5, draw=black, inner sep=10pt]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -225,16 +299,46 @@ Yeah so a lot of combinatorics is about finding valid constructions. Actually th
 It's called a sunflower because it looks like one when you draw it: 
 
 \begin{theorem}[Erdos-Rado Sunflower Lemma]
-    Given a family $\mathcal F$ of size $s$ sets, we may find a sunflower if $|\mathcal F| > k!(s-1)^k$
+    Given a family $\mathcal F$ of size $s$ sets, we may find a sunflower of size $k$ if $|\mathcal F| > s!(k-1)k^{s-1}$
 \end{theorem}
 
 \begin{proof}
-    
+  Define $f(s,k)$ to be the maximal cardinality of $\mathcal F$ such that it does not contain a sunflower. Continue with induction on $s$, and suppose that no sunflower exists in $\mathcal F$. If $s=1$, clearly $f(1, k) \le k-1$. To induct $s-1 \to s$, let $A_1, \ldots, A_t$ be the maximum collection of pairwise disjoint sets in $\mathcal F$. Then define $A = \cup_{1 \le i \le t} A_i$ so that $|A| < sk$, or else we can select $k$ disjoint sets. Define $\mathcal F_a = \{S\not a : a \in S, S \in \mathcal F\}$. Bound $|\mathcal F| \le \sum_a |\mathcal F_a| \le f(s-1, k)\cdot sk \le s!(k-1)k^{s-1}$ as desired. 
 \end{proof}
+
+\begin{problem}
+  
+\end{problem}
+
+% \begin{remark}
+%   A better bound is $|\mathcal F| > s!(k-1)^s$, but asymptotically it doesn't matter. 
+%   This bound is also very weak, though the lower bound is $(k-1)^s$ which is a difference of $s!$. 
+% \end{remark}
+
 
 
 
 \section{Standard Olympiad Combinatorics}
+
+\begin{problem}[2025 IMO 6]
+  Consider a $2025\times2025$ grid of unit squares. Matilda wishes to place on the grid some rectangular tiles, possibly of different sizes, such that each side of every tile lies on a grid line and every unit square is covered by at most one tile.
+
+Determine the minimum number of tiles Matilda needs to place so that each row and each column of the grid has exactly one unit square that is not covered by any tile.
+\end{problem}
+
+\begin{solution}
+Color all uncovered squares in the $n^2 \times n^2$ grid. Define a path to be a sequence of squares $s_1, \ldots, s_k$ such that $s_{i+1}$ has a larger $x$ and $y$ coordinate than $s_i$. We can always partition the grid into paths $\mathcal P_1, \ldots, \mathcal P_j$ such that every square is included in exactly $1$ path. 
+\\
+\textbf{Claim: }The minimum number of rectangles needed to satisfy the condition is exactly \[\sum_{i=1}^j |P_i| + 2(n-1) - 1 = n^2+2n-3\]
+\\
+
+\end{solution}
+
+Let's generalize this.
+
+\begin{problem}[Buffed to 3D]
+  
+\end{problem}
 
 \subsection{Invariant}
 
@@ -242,7 +346,41 @@ It's called a sunflower because it looks like one when you draw it:
 
 \section{Graphs}
 
+\begin{lemma}[Lindström–Gessel–Viennot]
+  Let $G$ be a weighted, acyclic graph, and let $A = \{a_1, a_2, \ldots, a_n\}$ and $B = \{b_1, \ldots, b_n\}$ be starting and ending vertices. Suppose that for any $i< j$ and $k<l$, every path $P_1 : a_i \to b_l$ intersects every path $P_2 : a_j \to b_k$. For two vertices, let $w(a,b)$ be the weight over the product of edges from $a \to b$. If \[M = \begin{pmatrix}
+    w(a_1, b_1) & w(a_1, b_2) & \ldots & w(a_1, b_n) \\ w(a_2, b_1) & w(a_2, b_2) & \ldots & w(a_2, b_n) \\ \vdots & \vdots & \ddots & \vdots \\ w(a_n, b_1) & w(a_n, b_2) & \ldots & w(a_n, b_n)
+  \end{pmatrix}\] Let $P_1, \ldots, P_n$ be an $n$-tuple of paths from $A$ to $B$, and let $\sigma$ be a permutation of $[n]$. Then \[\det(M) = \sum_{(P_1, \ldots, P_n) : A \to B} \text{sign}(\sigma(P)) \prod_{i=1}^n w(P_i)\] where $\text{sign}(\sigma) = (-1)^{N(\sigma)}$ where $N(\sigma)$ is the number of inversions. 
+\end{lemma}
+
+\begin{proof}
+  By the definition of $M$, \[\det(M) = \sum_{\sigma \in S_n} \text{sign}(\sigma) \prod_{i=1}^n w(a_i, b_{\sigma(i)}) \] \[ =  \sum_{\sigma \in S_n} \text{sign}(\sigma) \sum \{w(P) : P \text{ is an $n$-tuple of paths }\}\] \[ =  \sum_{P = (P_1, \ldots, P_n) : A \to B} \text{sign}(\sigma(P)) w(P) \]
+\end{proof}
+
+\begin{problem}[2024 Putnam A6]
+  Let $c_0,\,c_1,\,c_2,\,\ldots$ be a sequence defined so that
+\[
+\frac{1-3x-\sqrt{1-14x+9x^2}}{4}=\sum_{k=0}^\infty c_kx^k
+\]for sufficiently small $x$. For a positive integer $n$, let $A$ be the $n$-by-$n$ matrix with $i,j$-entry $c_{i+j-1}$ for $i$ and $j$ in $\{1,\,\ldots,\,n\}$. Find the determinant of $A$.
+\end{problem}
+
+\begin{solution}[Solution 1]
+  Weight every edge of the cartesian plane $(a,b) \to (a+1, b)$ with $5$ if $b \equiv a\pmod 2$ and $2$ if $b \equiv a+1 \pmod 2$. 
+  \\
+  \textbf{Claim: }The sum of the paths from $(0,0)$ to $(n-1, n-1)$ is exactly $c_n$. 
+  \\ \textit{Proof. }Let $d_i$ be the sum of the weights with the $2$'s and $5$'s reversed. Then \[c_n = 5(c_{n-1}d_1 + c_{n-2}d_2 + \ldots + c_{1}d_{n-1})\] \[d_n = 2(c_{n-1}d_1 + \ldots + c_1d_{n-1})\] so $d_n = \frac{2}{5}c_n$ for $n\ge 2$, so \[c_n = 2(c_1c_{n-1} + \ldots + c_{n-1}c_1) + 3c_{n-1}\] 
+
+  Let $a_i = (n-i+1, n-i+1)$ and $b_i = (n+i-1, n+i-1)$ so applying LGV gives $10^{n \choose 2}$ as the answer. 
+\end{solution}
+
+\begin{solution}[Solution 2]
+  
+\end{solution}
+
 \section{Additive Combinatorics}
+
+
+
+
 
 
 \end{document}

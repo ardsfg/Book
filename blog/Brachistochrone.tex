@@ -1,0 +1,201 @@
+% !TEX root = ./Brachistochrone.tex
+\documentclass[11pt]{scrartcl}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{epigraph}
+\usepackage[colorlinks]{hyperref}
+\usepackage{microtype}
+\usepackage{mathtools}
+\usepackage[headsepline]{scrlayer-scrpage}
+\usepackage{thmtools}
+\usepackage{listings}
+\usepackage{derivative}
+\renewcommand{\epigraphsize}{\scriptsize}
+\renewcommand{\epigraphwidth}{60ex}
+\addtolength{\textheight}{3.14cm}
+\ihead{\footnotesize\textbf{Analytical Mechanics}}
+\ohead{\footnotesize Updated \today}
+\mdfdefinestyle{mdbluebox}{roundcorner=10pt,innerbottommargin=9pt,
+    linecolor=blue,backgroundcolor=TealBlue!5,}
+\declaretheoremstyle[headfont=\sffamily\bfseries\color{MidnightBlue},
+    mdframed={style=mdbluebox},]{thmbluebox}
+\mdfdefinestyle{mdredbox}{frametitlefont=\bfseries,innerbottommargin=8pt,
+    nobreak=true,backgroundcolor=Salmon!5,linecolor=RawSienna,}
+\declaretheoremstyle[headfont=\bfseries\color{RawSienna},
+    mdframed={style=mdredbox},headpunct={\\[3pt]},postheadspace=0pt,]{thmredbox}
+\mdfdefinestyle{mdgreenbox}{linecolor=ForestGreen,backgroundcolor=ForestGreen!5,
+    linewidth=2pt,rightline=false,leftline=true,topline=false,bottomline=false,}
+\declaretheoremstyle[headfont=\bfseries\sffamily\color{ForestGreen!70!black},
+    mdframed={style=mdgreenbox},headpunct={ --- },]{thmgreenbox}
+\mdfdefinestyle{mdblackbox}{linecolor=black,backgroundcolor=RedViolet!5!gray!5,
+    linewidth=3pt,rightline=false,leftline=true,topline=false,bottomline=false,}
+\declaretheoremstyle[mdframed={style=mdblackbox}]{thmblackbox}
+\declaretheorem[style=thmredbox,name=Problem]{problem}
+\declaretheorem[style=thmredbox,name=Required Problem,sibling=problem]{reqproblem}
+\declaretheorem[style=thmbluebox,name=Theorem,numberwithin=problem]{theorem}
+\declaretheorem[style=thmbluebox,name=Lemma,sibling=theorem]{lemma}
+\declaretheorem[style=thmbluebox,name=Theorem,numbered=no]{theorem*}
+\declaretheorem[style=thmbluebox,name=Lemma,numbered=no]{lemma*}
+\declaretheorem[style=thmblackbox,name=Remark,sibling=theorem]{remark}
+\declaretheorem[style=thmblackbox,name=Remark,numbered=no]{remark*}
+
+\newenvironment{walkthrough}{\noindent\textbf{\color{green!40!black}Walkthrough.}}{}
+\newlist{walk}{enumerate}{3}
+\setlist[walk]{label=\bfseries (\alph*)}
+\newenvironment{subproof}[1][Proof]{%
+\begin{proof}[#1] \renewcommand{\qedsymbol}{$\blacksquare$}}%
+{\end{proof}}
+\newenvironment{soln}{\begin{proof}[Solution]}{\end{proof}}
+
+\usepackage{asymptote}
+
+\begin{document}
+\title{Analytical Mechanics}
+\subtitle{Prof. Zarate}
+\author{Raymond Xu}
+\date{\today}
+\maketitle
+
+% ========================================
+
+
+\section{Brachistochrone's Curve}
+
+We will give the analytical solution to the Brachistochrone Problem proposed by Bernoulli and solved by Euler. 
+
+Use the cartesian plane, and set the starting position to be $(0,h)$ and the ending position to be $(a,b)$, $0 \le b \le h$. Make the assumptions that 
+
+\begin{enumerate}
+    \item The ball is always in contact with the curve
+    \item The ball is of negligible size
+    \item Friction is negligible
+    
+\end{enumerate}
+
+Furthermore, let the curve be defined as a function $y(x)$. 
+
+\begin{lemma*}[Fundamental Theorem of the Calculus of Variations]
+    Let $f$ be a fixed function in $x$, and let $g$ be an arbitrary function in $x$. Then \[\int_{x_0} ^{x_1} f(x) g(x) \ \mathrm dx = 0\] implies that $f$ is identically $0$. 
+\end{lemma*}
+
+\begin{proof}
+    Suppose for the sake of contradiction that $f$ is not $0$, so $\exists [a,b] \subseteq [x_0,x_1] : f(k) \neq 0, k\in[a,b]$. It can be shown that there exists a smooth function $h$ satisfying $h(a) = h(b) = 0$ such that \[\int_{x_0}^{x_1} f(x)h(x) \neq 0\] so just add $h$ to $g$ to obtain a contradiction. 
+
+    
+
+
+    % Define $F(x,y,y')$ to be a function of a curve $y(x)$. The minimum value of \[I = \int_{x_0}^{x_1} F(x,y,y') \ \mathrm dx\] subject to $y(x) = y_s(x) + \alpha \epsilon (x)$ occurs when \[\frac{dI}{d\alpha} = \int_{x_0}^{x_1} \frac{\partial F}{\partial y}\epsilon(x) + \frac{\partial F}{\partial y'}\frac{d\epsilon}{dx} \ \mathrm dx = 0 \implies \int_{x_0}^{x_1} \epsilon(x) \left( \frac{\partial F}{\partial y}- \frac{d}{dx} \frac{\partial F}{\partial y} \right ) \ \mathrm dx = 0\] \[\implies\frac{\partial F}{\partial y} - \frac{d}{dx} \frac{\partial F}{\partial y}= 0  \] by \[\frac{d}{dx}\left ( \frac{\partial F}{\partial y'}\epsilon(x) \right ) = \frac{d\epsilon}{dx} \frac{\partial F}{\partial y'} + \frac{d}{dx} \frac{\partial F}{\partial y'} \epsilon(x) \]
+    % Suppose for contradiction that \[\frac{\partial F}{\partial y} + \frac{d}{dx} \frac{\partial F}{\partial y} \neq 0\] Then it can be shown there exists a continuous function $\epsilon$ which creates a negative value of $\frac{dI}{d\alpha}$
+\end{proof}
+
+Make the observations that \[m\frac{d^2s}{dt^2} = mg\sin \theta = mg\frac{dy}{ds}(t)\] \[\frac{ds}{dx} =\sqrt{1 + \left (\frac{dy}{dx}\right )^2} \iff \frac{ds}{dt} =\frac{dx}{dt} \sqrt{1 + \left (\frac{dy}{dx} \right )^2}\] Combine both to get \[\frac{1}{2}\frac{d}{dt}\left ( \frac{ds}{dt} \right )^2 = g \frac{dy}{dt} \iff \frac{ds}{dt} = \sqrt{2g(h-y)}\] 
+\begin{remark*}
+    A quicker way to derive $\frac{ds}{dt}$ is \[\frac{1}{2} mv^2 = mg\Delta h = mg(h-y) \implies \frac{ds}{dt} = v = \sqrt{2g(h-y)}\] but second derivatives are more fitting for this derivation. 
+\end{remark*}
+To get time, we integrate \[\int_0^a \frac{\sqrt{1 + \left  ( \frac{dy}{dx} \right )^2}}{\sqrt{2g(h-y)}} \ \mathrm dx = \frac{1}{\sqrt{2g}}\int_0^a \sqrt{\frac{1 + \left ( \frac{dy}{dx}\right )^2}{h-y}} \ \mathrm dx\] Let $F(y, y') = \sqrt{\frac{1 + \left ( \frac{dy}{dx} \right )^2}{h-y}}$ and define $y(x) = y_m(x) + \alpha \epsilon(x)$ for some function $\epsilon$ defined in $x$. Further define \[I(F) = \frac{1}{\sqrt{2g}} \int_0^a F(y,y')\ \mathrm dx\] as a function $I : F \to \mathbb R$. 
+
+\begin{remark*}
+    We now eliminated $t$ and $x$ from the calculations. All that remains is to optimize $y$ and $y'$. It suffices to treat these as separate functions. 
+\end{remark*}
+
+\begin{lemma*}[Euler-Lagrange]
+\[\frac{\partial F}{\partial y} - \frac{d}{dx}\frac{\partial F}{\partial y'} = 0\]
+\end{lemma*}
+
+\begin{proof}
+
+ \[\frac{dI}{d\alpha} = \frac{1}{\sqrt{2g}} \int_0^a \frac{\partial F}{\partial y} \cdot e(x) + \frac{\partial F}{\partial y'} \cdot \frac{d\epsilon}{dx} \ \mathrm dx\] but $\epsilon(0) = \epsilon(a) = 0$, so \[\int_0^a \frac{d}{dx}\left ( \frac{\partial F}{\partial y'}\epsilon(x) \right ) \ \mathrm dx = 0\] \[\implies \frac{dI}{d\alpha} = \frac{1}{\sqrt{2g}} \int_0^a \frac{\partial F}{\partial y} \epsilon(x) - \frac{d}{dx} \frac{\partial F}{\partial y'} \epsilon(x) \ \mathrm dx\] \[ \implies \frac{\partial F}{\partial y} - \frac{d}{dx}\frac{\partial F}{\partial y'} = 0\] 
+
+ \begin{remark*}
+     This is just a natural step in the proof. Only calling it a lemma because I need to cite it in the next lemma. 
+ \end{remark*}
+
+\end{proof}
+
+% \begin{lemma*}[Euler]
+%     \[\frac{d}{dx} \left (F - \frac{\partial F}{\partial y'} y' \right) = -\frac{1}{2} \frac{y'\sqrt{1+y'^2}}{y^\frac{3}{2}}\]
+% \end{lemma*}
+
+% \begin{proof}
+% \[\frac{d}{dx} \left ( F - \frac{\partial F}{\partial y'}y' \right ) = \frac{\partial F}{\partial x} - \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y}\cdot \frac{\partial y}{\partial x}\] so substitute for $\frac{\partial F}{\partial y}$ and $\frac{\partial y}{\partial x}$. 
+% \end{proof}
+
+
+
+\begin{lemma*}[Beltrami Identity]
+    \[\frac{d}{dx} \left ( F - \frac{\partial F}{\partial y'} y' \right ) = 0\]
+    \[\implies F - \frac{\partial F}{\partial y'}y' = C\] for some constant $C$. 
+\end{lemma*}
+
+\begin{proof}
+\[\frac{d}{dx} F = \frac{\partial F}{\partial y}\cdot \frac{\partial y}{\partial x} + \frac{\partial F}{\partial y'} \cdot \frac{\partial y'}{\partial x}\] because $\frac{\partial F}{\partial x} = 0$. Then \[\frac{d}{dx} \left ( \frac{\partial F}{\partial y'}y' \right ) = \frac{\partial F}{\partial y'} \cdot \frac{\partial y'}{\partial x} + \frac{\partial F}{\partial y} y' \] by Euler-Lagrange. Subtract to get \[\frac{d}{dx} \left (F - \frac{\partial F}{\partial y'} y' \right ) = 0\]
+\end{proof}
+
+Note that \[\frac{\partial F}{\partial y'} = y'\frac{1}{\sqrt{h-y} \sqrt{1 + y'^2}}\] and by Beltrami, \[\sqrt{\frac{1 + y'^2}{h-y}} - y'^2 \frac{1}{\sqrt{h-y}\sqrt{1+y'^2}} = C\] \[\implies \frac{1}{C} = \sqrt{h-y}\sqrt{1+y'^2}\] is constant. Note that $C \neq 0$, because otherwise we have no solutions in $y,y'$. 
+
+Suppose that $y'$ is strictly positive or strictly negative on the interval $[p,q]$. Substitute \[\frac{dy}{dx} = \pm\sqrt{\frac{1-C^2(h-y)}{C^2(h-y)}}\] to get \[x = \int \frac{1}{y'} \ \mathrm dy = \int \pm \sqrt{\frac{C^2(h-y)}{1-C^2(h-y)}} \ \mathrm dy\] Substitute $h-y = \frac{1}{C^2} \sin^2 \theta$ gives $\frac{dy}{d\theta} = -\frac{2\sin\theta \cos\theta}{C^2}$ so \[x = \int \pm \frac{\sin\theta}{\cos\theta} \cdot \frac{-2\sin\theta\cos\theta}{C^2} \ \mathrm d\theta = \mp\frac{1}{C^2}(\theta - \sin\theta\cos\theta)\]
+for certain bounds on $\theta$. The parameterization is \[\begin{cases}
+    x = \frac{1}{C^2}(\theta - \sin\theta \cos\theta) \\ y = -\frac{1}{C^2}\sin^2\theta+h
+\end{cases}\] where \[\frac{a}{b-h} = \frac{\theta - \sin\theta\cos\theta}{\sin^2\theta}\] can be used to solve for $\theta$ and $C$. 
+
+\begin{center}
+    \begin{tikzpicture}
+\draw[->] (0,0) -- (0,3);
+\draw[->] (0,0) -- (2.6*pi,0);
+\draw[red,domain=-0.5*pi:2.5*pi,samples=50] plot ({\x - sin(\x r)},{1 + cos(\x r)});
+\end{tikzpicture}
+\end{center}
+\[\text{The Cycloid}\]
+
+\section{Catenaries}
+
+We will an analytical solution to the hanging chain problem. The elementary solution can be found at the end of the document. Suppose that a string $\ell$ is attached to two points $(0,h)$ and $(a,b)$. Make the assumptions that
+
+\begin{enumerate}
+    \item The string is perfectly incompressible
+    \item The string has a uniform mass density
+\end{enumerate}
+
+Furthermore, let the curve be defined as a function $y(x)$. We will minimize the potential energy \[I = \int_0^a y \sqrt{1 + \left ( \frac{dy}{dx}\right )^2} \ \mathrm dy\] Let $F(y,y') = y \sqrt{1 + \left ( \frac{dy}{dx}\right )^2}$ and define $y(x) = y_m(x) + \alpha \epsilon(x)$. As usual, set \[\frac{dI}{d\alpha} = \int_0^a \frac{\partial F}{\partial y} \epsilon(x) + \frac{\partial F}{\partial y'} \frac{d\epsilon}{ dx} \ \mathrm dx = \int_0^a \frac{\partial F}{\partial y} \epsilon(x) - \frac{d}{dx} \frac{\partial F}{\partial y'} \epsilon(x) \ \mathrm dx = 0\] and \[F - \frac{\partial F}{\partial y'}y' = C\] by Beltrami. Direct computation gives \[y\sqrt{1 + y'^2} - yy'^2 \cdot \frac{1}{\sqrt{1 + y'^2}} = C \implies C = \frac{y}{\sqrt{1+y'^2}}\] Suppose that $y'$ is strictly increasing or decreasing over an interval $[p,q]$. Substitute $\frac{dy}{dx} = \pm \sqrt{\frac{y^2 - C^2}{C^2}}$ so given correct bounds of integration, \[x = \int \frac{1}{y'} \ \mathrm dy = \int \pm \sqrt{\frac{C^2}{y^2 - C^2}} \ \mathrm dy \] which we may solve by substituting $y =C \sec \theta$ and $\frac{dy}{d\theta} = C\sec\theta \tan\theta$ to get \[x = C\int \frac{\cos\theta}{\sqrt{C^2 - C^2\cos^2\theta}} C\sec\theta \tan\theta \ \mathrm d\theta = C^2 \int \sec\theta \ \mathrm d\theta \] \[ = C^2 \ln |\sec\theta +\tan\theta| = C^2 \ln \left |\frac{\sin\left (\arccos \frac{C}{y} \right )+1}{\cos \left (\arccos \frac{C}{y} \right )}\right | = C^2 \ln |\sqrt{y^2-C^2} + y| + K \] which gives the parameterizations \[\begin{cases}
+    x = \pm\sqrt{y^2-C^2}+y + K\\ y = e^{\frac{x}{C^2}} 
+\end{cases}\] \[\begin{cases}
+    x = x \\ y = \frac{1}{2}\left (e^{\frac{x-K}{C^2}} + e^{-\frac{x-K}{C^2}}\right )
+\end{cases}\] where the last step is by PlanetMath. 
+
+\begin{center}
+    \begin{tikzpicture}[scale=1,thick,
+    ]
+\coordinate (A) at (0,0);
+\coordinate (A') at (0,2);   
+\coordinate (B) at (10,0);   
+\coordinate (B') at (10,2);
+\coordinate (C) at (5,.25);
+\coordinate (center) at (5,5);
+
+
+\draw [very thick] (A) -- (A')node{}; 
+\draw [very thick] (B) -- (B');
+\draw [blue,] plot [smooth, tension=1] coordinates { (A') (C) (B')};                
+\end{tikzpicture}  
+\end{center}
+
+\[\text{The Catenary}\]
+
+\begin{remark*}
+    There is also a simple elementary solution where we set \[\frac{dy}{dx} = \frac{F_g}{F_t}\] where $F_g$ is the force of gravity, defined by \[F_g(x) \propto \int_m^x \sqrt{1 + \left ( \frac{dy}{dx}\right )^2} \ \mathrm dx\] where $(m, y(m))$ is a local minimum, and \[F_t = \alpha\] is a constant. 
+\end{remark*}
+
+% \subsection{Elementary}
+
+% Let $0< m < a$ be a point which minimizes $y(x)$ on the interval $[0,a]$. Let $F_g(x)$ and $F_t(x)$ be the vertical and horizontal forces acting on the string at point $(x, y(x))$, and let $\mu$ be the mass density. 
+
+% \begin{lemma*}
+%     \[\frac{dy}{dx} = \frac{F_g}{F_t}\] \[F_g(a) = \mu \int_m^{a} \sqrt{1 + \left ( \frac{dy}{dx} \right )^2} \ \mathrm dx\]
+% \end{lemma*}
+
+% Allowing the 
+
+
+\end{document}

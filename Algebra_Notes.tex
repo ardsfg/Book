@@ -7,7 +7,7 @@
 % by the LaTeX processor.
 
 % Include math
-\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsmath,amssymb}
 % Include links
 \usepackage{hyperref}
 \usepackage[dvipsnames]{xcolor}
@@ -65,7 +65,7 @@
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
  \newcommand{\pmbox}[1]{
-  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=green!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=green!100, fill=green!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -81,11 +81,31 @@
 \def\theoremframecommand{\pmbox}
 \newshadedtheorem{problem}{Problem}
 
+\theoremclass{Proof}
+\theoremstyle{empty}
+\theorembodyfont{\normalfont}
+ \newcommand{\pppmbox}[1]{
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=cyan!100, fill=cyan!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
+  \noindent%
+  \begin{tikzpicture}%
+    \node [pmbox] (box){%
+      \begin{minipage}{0.95\textwidth}%
+        \text{#1}%
+      \end{minipage}%
+    };%\
+    \node[fancytitle, right = 10pt] at (box.north west) { \textbf{Proof}
+    };%
+    \end{tikzpicture}}
+
+\def\theoremframecommand{\pppmbox}
+\newshadedtheorem{proof}{Proof}
+
 \theoremclass{Example}
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
  \newcommand{\embox}[1]{
-  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=Dandelion!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=Dandelion!100, fill=Dandelion!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -107,7 +127,7 @@
 \theorembodyfont{\normalfont}
 
  \newcommand{\dpmbox}[1]{
-  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+  \tikzstyle{pmbox} = [rectangle, rounded corners, draw=gray!100, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -127,7 +147,7 @@
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
 \newcommand{\tpmbox}[1]{
-\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=gray!100, fill=gray!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
 \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
 \noindent%
 \begin{tikzpicture}%
@@ -148,7 +168,7 @@
 \theoremstyle{empty}
 \theorembodyfont{\normalfont}
 \newcommand{\propmbox}[1]{
-\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=black, fill=orange!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
+\tikzstyle{tpmbox} = [rectangle, rounded corners, draw=orange!100, fill=orange!5, inner sep=10pt, drop shadow={fill=black, opacity=.2}]%
 \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
 \noindent%
 \begin{tikzpicture}%
@@ -169,7 +189,7 @@
 \theorembodyfont{\normalfont}
 
  \newcommand{\spmbox}[1]{
-  \tikzstyle{spmbox} = [rectangle, rounded corners, fill=green!5, draw=black, inner sep=10pt]%
+  \tikzstyle{spmbox} = [rectangle, rounded corners, fill=green!5, draw=green!100, inner sep=10pt]%
   \tikzstyle{fancytitle} =[fill=white, text=black, rectangle, rounded corners, draw= black]%
   \noindent%
   \begin{tikzpicture}%
@@ -317,6 +337,21 @@
 
 \subsection{Finite Differences}
 
+\begin{problem}[2023 Putnam A5]
+  
+\end{problem}
+
+\begin{problem}[2026 CTST P21]
+  Let \( n > k \) be positive integers, and let \( d_1, d_2, \dots, d_k \) be positive integers. For \( I \subseteq \{1, 2, \dots, k\} \), define \( d_I = \sum_{i \in I} d_i \) (with \( d_\emptyset = 0 \)). Define the polynomial
+\[
+f(t) = \sum_{I \subseteq \{1, 2, \dots, k\}} (-1)^{|I|} \binom{t + n - d_I}{n},
+\]where \( \binom{x}{n} = \frac{x(x-1)\cdots(x-n+1)}{n!} \). Prove that all coefficients of \( f(t) \) are non‑negative, and that this happens if and only if \( \sum_{i=1}^k d_i \le n+1 \).
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
 \subsection{Fourier Transformations}
 
 \begin{definition}[Discrete Fourier Decomposition]
@@ -353,9 +388,9 @@ Define $f(t) = \sum_{x\in X} t^x$ to be a generating function. Then \[|A| = \lim
 Given a polnyomial $f(z) \in \mathbb C[x]$ with roots $z_1, z_2, \ldots, z_n$, its derivative $f'(z)$ with roots $w_1, w_2, \ldots, w_{n-1}$ lie within the convex hull of $z_1, \ldots, z_n$
 \end{theorem}
 
-% \begin{proof}
-%   Assume that $f(x)$ shares no roots with $'f(x)$ by dividing by roots. Consider \[\frac{d}{dz} \ln f(z) = \frac{f'(z)}{f(z)} = \sum_{i=1}^n \frac{1}{z - z_i}.\] Set $z \in \{w_1, \ldots, w_{n-1}\}$ to get \[\sum_{i=1}^{n} \frac{1}{w_j-z_i} = 0 \iff w_j\sum_{i=1}^n \frac{1}{|w_j-z_i|^2}=\sum_{i=1}^n \frac{z_i}{|w_j-z_i|^2}\] \[\iff w_j = \frac{\sum_{i=1}^n \frac{z_i}{|w_j-z_i|^2}}{\sum_{i=1}^n \frac{1}{|w_j-z_i|^2}}\] meaning that $w_j$ is a convex sum of the vectors $z_1, \ldots, z_n$ as needed. 
-% \end{proof}
+\begin{proof}
+  Assume that $f(x)$ shares no roots with $'f(x)$ by dividing by roots. Consider \[\frac{d}{dz} \ln f(z) = \frac{f'(z)}{f(z)} = \sum_{i=1}^n \frac{1}{z - z_i}.\] Set $z \in \{w_1, \ldots, w_{n-1}\}$ to get \[\sum_{i=1}^{n} \frac{1}{w_j-z_i} = 0 \iff w_j\sum_{i=1}^n \frac{1}{|w_j-z_i|^2}=\sum_{i=1}^n \frac{z_i}{|w_j-z_i|^2}\] \[\iff w_j = \frac{\sum_{i=1}^n \frac{z_i}{|w_j-z_i|^2}}{\sum_{i=1}^n \frac{1}{|w_j-z_i|^2}}\] meaning that $w_j$ is a convex sum of the vectors $z_1, \ldots, z_n$ as needed. 
+\end{proof}
 
 \begin{definition}[Point Derivative]
   The point derivative of a complex-valued function $f(z)$ is \[D_\zeta f(z) = (\zeta - z)f'(z) + nf(z)\] where $\deg(f) = n$.
@@ -365,6 +400,10 @@ Given a polnyomial $f(z) \in \mathbb C[x]$ with roots $z_1, z_2, \ldots, z_n$, i
 \begin{proposition}[Gauss-Lucas for Point Derivative]
   Let the roots of $D_\zeta f(z)$ be $w_1, \ldots, w_{n-1}$ and $f(z)$ be $z_1, \ldots, z_n$. Then $\max(\|w_1\|, \ldots, \|w_{n-1}\|) \le \max(\|z_1\|, \ldots, \|z_n\|)$.
 \end{proposition}
+
+\begin{proof}
+    Let $w$ be a root of $D_\zeta f(z)$, so \[\frac{f'(z)}{f(z)} = \frac{d}{dz} \ln f(z) =\sum_{i=1}^n \frac{1}{z_i-\zeta}= \frac{n}{z-\zeta}\] However $z \to \frac{1}{z-\zeta}$ is a mobius transformation sending a disc to another disc, and the sum of many discs is convex. We therefore have equality when $z_i$ are identical. 
+\end{proof}
 
 \begin{problem}[2026 CTST 3]
   Let integers \(n > k > 1\), and let \(z_1, z_2, \ldots, z_n\) be complex numbers with modulus at most 1. Prove that
@@ -390,15 +429,23 @@ Given a polnyomial $f(z) \in \mathbb C[x]$ with roots $z_1, z_2, \ldots, z_n$, i
 \end{solution}
 
 % \begin{proof}
-%   Let $w$ be a root of $D_\zeta f(z)$, so \[\frac{f'(z)}{f(z)} = \frac{d}{dz} \ln f(z) =\sum_{i=1}^n \frac{1}{z_i-\zeta}= \frac{n}{z-\zeta}\] However $z \to \frac{1}{z-\zeta}$ is a mobius transformation sending a disc to another disc, and the sum of many discs is convex. We therefore have equality when $z_i$ are identical. 
 % \end{proof}
 
-
+\section{Abstract Algebra}
 
 \section{Algebraic Geometry}
 
+\begin{theorem}[Riemann-Roch]
+  
+\end{theorem}
 
 
+\begin{theorem}[Hasse-Weil]
+  Given a curve polynomial curve $C: y^2 = f(x)$ evaluated over a finite field $\mathbb F_{q^k}$, we necessarily have \[|q^k+1 - \# C(\mathbb F_{q^k})| \le 2g\sqrt{qa^k}\] where $g$ is the genus of the curve. 
+\end{theorem}
 
+\begin{proof}
+  
+\end{proof}
 
 \end{document}

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1792039784.54734 "/Users/ray/Book/Algebra_Notes.tex" "Algebra_Notes.pdf" "Algebra_Notes" 1792039787.58623 0
-  "/Users/ray/Book/Algebra_Notes.tex" 1792039784.2604 16181 4e8a2fa9de7dfb7db63149cd8f5c404c ""
+["pdflatex"] 1794070894.11244 "/Users/ray/Book/Algebra_Notes.tex" "Algebra_Notes.pdf" "Algebra_Notes" 1794070897.34966 0
+  "/Users/ray/Book/Algebra_Notes.tex" 1794070893.85357 17861 80d5624a7c47c21a5aa8c494ff90e7b1 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -130,7 +130,6 @@
   "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def" 1755201859 7067 11553488d1600cac6a0cfca012fca111 ""
   "/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty" 1575152242 21514 b7557edcee22835ef6b03ede1802dad4 ""
   "/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty" 1576624663 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
-  "/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty" 1591045760 12594 0d51ac3a545aaaa555021326ff22a6cc ""
   "/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1359763108 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1359763108 13829 94730e64147574077f8ecfea9bb69af4 ""
   "/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd" 1359763108 961 6518c6525a34feb5e8250ffa91731cff ""
@@ -208,14 +207,13 @@
   "/usr/local/texlive/2026/texmf-dist/tex/latex/ucs/utf8x.def" 1699567458 8944 e3433baec74c4b7b278c6b6a547ff9ec ""
   "/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty" 1727642399 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "/usr/local/texlive/2026/texmf-dist/tex/latex/xpatch/xpatch.sty" 1585258158 8314 7803f78066c4f9d008405191a4b43073 ""
   "/usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf" 1770478701 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1777343030 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1774209607 3636776 dc5fa9b6b1453b9d196cd42edf876004 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "Algebra_Notes.aux" 1792039787.39838 10772 ada30bf549694df26dc7c4816ed98544 "pdflatex"
-  "Algebra_Notes.tex" 1792039784.2604 16181 4e8a2fa9de7dfb7db63149cd8f5c404c ""
-  "Algebra_Notes.toc" 1792039787.40299 1953 3a8385e867b1915859d812654d5c99a0 "pdflatex"
+  "Algebra_Notes.aux" 1794070897.14665 11929 afacb3727a25e0ae06c3e0685ce776c1 "pdflatex"
+  "Algebra_Notes.tex" 1794070893.85357 17861 80d5624a7c47c21a5aa8c494ff90e7b1 ""
+  "Algebra_Notes.toc" 1794070897.15108 2025 5c8cbc43cdc7b13d593d8a39ad16a052 "pdflatex"
   (generated)
   "Algebra_Notes.aux"
   "Algebra_Notes.log"
