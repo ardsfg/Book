@@ -264,10 +264,6 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlayer.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlayer.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmtools.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmtools.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thm-patch.sty
@@ -301,6 +297,8 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/derivative/derivative.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/derivative/derivative.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
@@ -344,6 +342,7 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
@@ -391,13 +390,9 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
-INPUT /usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsl9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbxsl10.tfm
 INPUT Brachistochrone.aux
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
@@ -406,7 +401,7 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

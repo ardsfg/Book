@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  7 NOV 2026 10:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  10 NOV 2026 22:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -706,15 +706,31 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen280
 \xmathstrut@box=\box75
 \xmathstrut@dim=\dimen281
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
-Package: scrlayer-scrpage 2026/02/02 v3.49.2 KOMA-Script package (end user interface for scrlayer)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlayer.sty
-Package: scrlayer 2026/02/02 v3.49.2 KOMA-Script package (defining layers and page styles)
-Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2179.
 )
-Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
-(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmtools.sty
+/Users/ray/Book/blog/Brachistochrone.tex:11: Undefined control sequence.
+<recently read> \usespackage 
+                             
+l.11 \usespackage
+                 [headsepline]{scrlayer-scrpage}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/ray/Book/blog/Brachistochrone.tex:11: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \usespackage[
+                  headsepline]{scrlayer-scrpage}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmtools.sty
 Package: thmtools 2023/05/04 v0.76
 \thmt@toks=\toks44
 \c@thmt@dummyctr=\count346
@@ -781,6 +797,36 @@ Package: derivative 2024/02/08 v1.4 Nice and easy derivatives and differentials 
 \l__deriv_seq_pos_int=\count360
 \l__deriv_sort_max_int=\count361
 )
+/Users/ray/Book/blog/Brachistochrone.tex:18: Undefined control sequence.
+l.18 \ihead
+           {\footnotesize\textbf{Analytical Mechanics}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/ray/Book/blog/Brachistochrone.tex:18: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...\footnotesize\textbf{Analytical Mechanics}
+                                                  }
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/Users/ray/Book/blog/Brachistochrone.tex:19: Undefined control sequence.
+l.19 \ohead
+           {\footnotesize Updated \today}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Package thmtools Info: Key `mdframed' (with value `style=mdbluebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
@@ -798,7 +844,7 @@ Package thmtools Info: Key `mdframed' (with value `style=mdblackbox')
 (thmtools)             Will pass this to every \declaretheorem
 (thmtools)             that uses `style=thmblackbox' on input line 34.
 Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 36.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
 Package: thmdef-mdframed 2023/05/04 v0.76
 )
 \c@problem=\count362
@@ -914,6 +960,9 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 Package tocbasic Info: omitting babel extension for `lol'
 (tocbasic)             because of missing \bbl@set@language on input line 54.
 \scr@dte@lstlisting@maxnumwidth=\skip149
+ [1
+
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -938,10 +987,9 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 95.
 Package hyperref Info: bookmark level for unknown remark* defaults to 0 on input line 95.
- [1
+ [2
 
-
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+]
 Package mdframed Info: Not enough space on this page on input line 96.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -958,29 +1006,33 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 130.
- [2] [3] [4]
+ [3] [4] [5]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 187.
- [5] (./Brachistochrone.aux)
+ [6] (./Brachistochrone.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 34380 strings out of 467525
- 717181 string characters out of 5418982
- 1323068 words of memory out of 5000000
- 62695 multiletter control sequences out of 15000+600000
- 641712 words of font info for 118 fonts, out of 8000000 for 9000
+ 32989 strings out of 467525
+ 668381 string characters out of 5418982
+ 1250607 words of memory out of 5000000
+ 61322 multiletter control sequences out of 15000+600000
+ 640617 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 130i,21n,129p,11288b,1159s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Brachistochrone.pdf (5 pages, 207795 bytes).
+ 130i,10n,129p,11288b,1159s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Brachistochrone.pdf (6 pages, 208540 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 32797 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 26653 words of extra memory for PDF output out of 29859 (max. 10000000)
 
